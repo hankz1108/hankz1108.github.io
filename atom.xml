@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hankz Blog</title>
+  <icon>https://hankz1108.github.io/icon.png</icon>
+  
+  <link href="https://hankz1108.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://hankz1108.github.io/"/>
+  <updated>2023-12-07T15:30:24.712Z</updated>
+  <id>https://hankz1108.github.io/</id>
+  
+  <author>
+    <name>Hankz</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[PHP] 在Linux上安裝PHP CS Fixer</title>
+    <link href="https://hankz1108.github.io/posts/20231206-php-install-cs-fixer-on-ubuntu/"/>
+    <id>https://hankz1108.github.io/posts/20231206-php-install-cs-fixer-on-ubuntu/</id>
+    <published>2023-12-06T14:27:39.000Z</published>
+    <updated>2023-12-07T15:30:24.712Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/PHP-CS-Fixer/PHP-CS-Fixer&quot;&gt;PHP CS Fixer&lt;/a&gt;作為一個程式碼標準修復器(PHP Coding Standards Fixer)。&lt;br&gt;在PHP的團隊開發中，可以確保每個開發人員</summary>
+      
+    
+    
+    
+    <category term="PHP" scheme="https://hankz1108.github.io/categories/PHP/"/>
+    
+    
+    <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
+    
+    <category term="Linux" scheme="https://hankz1108.github.io/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[PHP] 在Linux中安裝Composer</title>
+    <link href="https://hankz1108.github.io/posts/20231206-composer-install-on-ubuntu/"/>
+    <id>https://hankz1108.github.io/posts/20231206-composer-install-on-ubuntu/</id>
+    <published>2023-12-06T14:08:44.000Z</published>
+    <updated>2023-12-07T15:30:24.711Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;請參考&lt;a href=&quot;https://getcomposer.org/doc/00-intro.md&quot;&gt;Composer官方安裝文件&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;一、安裝&quot;&gt;&lt;a href=&quot;#一、安裝&quot; class=&quot;headerlink&quot; title=&quot;一、安裝&quot;</summary>
+      
+    
+    
+    
+    <category term="PHP" scheme="https://hankz1108.github.io/categories/PHP/"/>
+    
+    
+    <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
+    
+    <category term="Composer" scheme="https://hankz1108.github.io/tags/Composer/"/>
+    
+    <category term="Linux" scheme="https://hankz1108.github.io/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[MySQL] 在Linux中離線安裝MySQL</title>
+    <link href="https://hankz1108.github.io/posts/20231127-mysql-offline-install-rhel/"/>
+    <id>https://hankz1108.github.io/posts/20231127-mysql-offline-install-rhel/</id>
+    <published>2023-11-26T16:20:07.000Z</published>
+    <updated>2023-12-07T15:30:24.711Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;安裝流程&quot;&gt;&lt;a href=&quot;#安裝流程&quot; class=&quot;headerlink&quot; title=&quot;安裝流程&quot;&gt;&lt;/a&gt;安裝流程&lt;/h2&gt;&lt;h3 id=&quot;一、下載安裝包-RPM&quot;&gt;&lt;a href=&quot;#一、下載安裝包-RPM&quot; class=&quot;headerlink&quot; ti</summary>
+      
+    
+    
+    
+    <category term="MySQL" scheme="https://hankz1108.github.io/categories/MySQL/"/>
+    
+    
+    <category term="MySQL" scheme="https://hankz1108.github.io/tags/MySQL/"/>
+    
+    <category term="Linux" scheme="https://hankz1108.github.io/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[資訊安全] 雜湊、編碼與加密的區別</title>
+    <link href="https://hankz1108.github.io/posts/20231117-security-hash-encoding-and-encryption/"/>
+    <id>https://hankz1108.github.io/posts/20231117-security-hash-encoding-and-encryption/</id>
+    <published>2023-11-16T17:15:43.000Z</published>
+    <updated>2023-12-07T15:30:24.710Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;首先，請讓我強調&lt;/p&gt;
+&lt;h3 id=&quot;雜湊不等於編碼，編碼不等於加密，加密也不是雜湊&quot;&gt;&lt;a href=&quot;#雜湊不等於編碼，編碼不等於加密，加密也不是雜湊&quot; class=&quot;headerlink&quot; title=&quot;雜湊不等於編碼，編碼不等於加密，加密也不是雜湊!!!&quot;&gt;&lt;/</summary>
+      
+    
+    
+    
+    <category term="資訊安全" scheme="https://hankz1108.github.io/categories/%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8/"/>
+    
+    
+    <category term="資訊安全" scheme="https://hankz1108.github.io/tags/%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8/"/>
+    
+    <category term="Hash" scheme="https://hankz1108.github.io/tags/Hash/"/>
+    
+    <category term="Encoding" scheme="https://hankz1108.github.io/tags/Encoding/"/>
+    
+    <category term="Encryption" scheme="https://hankz1108.github.io/tags/Encryption/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[Vue] 解決使用Vue.Draggable排序表格無效問題</title>
+    <link href="https://hankz1108.github.io/posts/20231113-vue-draggable-table-useless/"/>
+    <id>https://hankz1108.github.io/posts/20231113-vue-draggable-table-useless/</id>
+    <published>2023-11-13T02:25:14.000Z</published>
+    <updated>2023-12-07T15:30:24.710Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;一、問題&quot;&gt;&lt;a href=&quot;#一、問題&quot; class=&quot;headerlink&quot; title=&quot;一、問題&quot;&gt;&lt;/a&gt;一、問題&lt;/h3&gt;&lt;p&gt;在使用&lt;a href=&quot;https://&quot;&gt;Sortable.js&lt;/a&gt;&lt;a href=&quot;https://github.c</summary>
+      
+    
+    
+    
+    <category term="Vue" scheme="https://hankz1108.github.io/categories/Vue/"/>
+    
+    
+    <category term="Vue" scheme="https://hankz1108.github.io/tags/Vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[Batch] bat檔案進行資料備份</title>
+    <link href="https://hankz1108.github.io/posts/20231107-batch-backup-folder/"/>
+    <id>https://hankz1108.github.io/posts/20231107-batch-backup-folder/</id>
+    <published>2023-11-06T18:19:14.000Z</published>
+    <updated>2023-12-07T15:30:24.709Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;對於在Windows系統中備份資料的需求&lt;br&gt;如果可以寫好一個批次檔&lt;br&gt;並使用工作排程定期複製檔案到指定目錄那就太方便了&lt;br&gt;以下是使用&lt;code&gt;xcopy&lt;/code&gt;指令實現的一個簡易的bat&lt;/p&gt;
+&lt;h3 id=&quot;一、bat檔案&quot;&gt;&lt;a href=&quot;#一、</summary>
+      
+    
+    
+    
+    <category term="Batch" scheme="https://hankz1108.github.io/categories/Batch/"/>
+    
+    
+    <category term="Batch" scheme="https://hankz1108.github.io/tags/Batch/"/>
+    
+    <category term="bat" scheme="https://hankz1108.github.io/tags/bat/"/>
+    
+    <category term="Windows" scheme="https://hankz1108.github.io/tags/Windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[Laravel] Supervisor執行Laravel的Queue Worker</title>
+    <link href="https://hankz1108.github.io/posts/20231105-laravel-queue-with-supervisor/"/>
+    <id>https://hankz1108.github.io/posts/20231105-laravel-queue-with-supervisor/</id>
+    <published>2023-11-04T18:27:47.000Z</published>
+    <updated>2023-12-07T15:30:24.709Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;在使用laravel中的Queue job的時候，除了程式本身寫好之外&lt;br&gt;伺服器環境還會需要確保Laravel的&lt;code&gt;queue:work&lt;/code&gt;指令可以持續進行&lt;br&gt;如果中斷還可以重新啟動&lt;br&gt;這個時候就會需要用到Supervisor這個工具了&lt;/p&gt;</summary>
+      
+    
+    
+    
+    <category term="Laravel" scheme="https://hankz1108.github.io/categories/Laravel/"/>
+    
+    
+    <category term="Laravel" scheme="https://hankz1108.github.io/tags/Laravel/"/>
+    
+    <category term="Queue" scheme="https://hankz1108.github.io/tags/Queue/"/>
+    
+    <category term="job" scheme="https://hankz1108.github.io/tags/job/"/>
+    
+    <category term="Supervisor" scheme="https://hankz1108.github.io/tags/Supervisor/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[AWS] 設定與上傳檔案到AWS S3(配合laravel-medialibrary)</title>
+    <link href="https://hankz1108.github.io/posts/20231104-aws-s3-setting/"/>
+    <id>https://hankz1108.github.io/posts/20231104-aws-s3-setting/</id>
+    <published>2023-11-04T15:05:31.000Z</published>
+    <updated>2023-12-07T15:30:24.709Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;設定AWS-S3-Simple-Storage-Service&quot;&gt;&lt;a href=&quot;#設定AWS-S3-Simple-Storage-Service&quot; class=&quot;headerlink&quot; title=&quot;設定AWS S3(Simple Storage Servic</summary>
+      
+    
+    
+    
+    <category term="AWS" scheme="https://hankz1108.github.io/categories/AWS/"/>
+    
+    
+    <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
+    
+    <category term="Laravel" scheme="https://hankz1108.github.io/tags/Laravel/"/>
+    
+    <category term="AWS" scheme="https://hankz1108.github.io/tags/AWS/"/>
+    
+    <category term="S3" scheme="https://hankz1108.github.io/tags/S3/"/>
+    
+    <category term="MediaLibrary" scheme="https://hankz1108.github.io/tags/MediaLibrary/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[PHP] PHP 連接SQL Server(MsSQL) on Windows</title>
+    <link href="https://hankz1108.github.io/posts/20231102-php-mssql-windows/"/>
+    <id>https://hankz1108.github.io/posts/20231102-php-mssql-windows/</id>
+    <published>2023-11-02T07:25:30.000Z</published>
+    <updated>2023-12-07T15:30:24.708Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;註：這裡也有&lt;a href=&quot;/posts/20231102-php-oracle-windows/&quot; title=&quot;[PHP] 連線Oracle DB on Windows&quot;&gt;Oracle的連接方式&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;環境建置&quot;&gt;&lt;a href=&quot;#環境建置</summary>
+      
+    
+    
+    
+    <category term="PHP" scheme="https://hankz1108.github.io/categories/PHP/"/>
+    
+    
+    <category term="CodeIgniter" scheme="https://hankz1108.github.io/tags/CodeIgniter/"/>
+    
+    <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
+    
+    <category term="Windows" scheme="https://hankz1108.github.io/tags/Windows/"/>
+    
+    <category term="MsSQL" scheme="https://hankz1108.github.io/tags/MsSQL/"/>
+    
+    <category term="SQL Server" scheme="https://hankz1108.github.io/tags/SQL-Server/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[PHP] 連線Oracle DB on Windows</title>
+    <link href="https://hankz1108.github.io/posts/20231102-php-oracle-windows/"/>
+    <id>https://hankz1108.github.io/posts/20231102-php-oracle-windows/</id>
+    <published>2023-11-02T07:14:30.000Z</published>
+    <updated>2023-12-07T15:30:24.708Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;註：這裡也有&lt;a href=&quot;/posts/20231102-php-mssql-windows/&quot; title=&quot;[PHP] PHP 連接SQL Server(MsSQL) on Windows&quot;&gt;SQL Server(MsSQL)的連接方式&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id</summary>
+      
+    
+    
+    
+    <category term="PHP" scheme="https://hankz1108.github.io/categories/PHP/"/>
+    
+    
+    <category term="CodeIgniter" scheme="https://hankz1108.github.io/tags/CodeIgniter/"/>
+    
+    <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
+    
+    <category term="Windows" scheme="https://hankz1108.github.io/tags/Windows/"/>
+    
+    <category term="Oracle" scheme="https://hankz1108.github.io/tags/Oracle/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[Batch] 使用Windows批次檔(bat)快速修改PATH環境變數</title>
+    <link href="https://hankz1108.github.io/posts/20231101-batch-change-env-path/"/>
+    <id>https://hankz1108.github.io/posts/20231101-batch-change-env-path/</id>
+    <published>2023-10-31T22:55:29.000Z</published>
+    <updated>2023-12-07T15:30:24.705Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;由於開發多個專案的時候，頻繁切換本地環境的PHP版本實在太麻煩，於是想要可以直接使用指令就完成切換的功能，於是有了這篇文章。&lt;/p&gt;
+&lt;h3 id=&quot;一、安裝pathman&quot;&gt;&lt;a href=&quot;#一、安裝pathman&quot; class=&quot;headerlink&quot; title=&quot;</summary>
+      
+    
+    
+    
+    <category term="Batch" scheme="https://hankz1108.github.io/categories/Batch/"/>
+    
+    
+    <category term="Batch" scheme="https://hankz1108.github.io/tags/Batch/"/>
+    
+    <category term="bat" scheme="https://hankz1108.github.io/tags/bat/"/>
+    
+    <category term="Windows" scheme="https://hankz1108.github.io/tags/Windows/"/>
+    
+    <category term="環境變數" scheme="https://hankz1108.github.io/tags/%E7%92%B0%E5%A2%83%E8%AE%8A%E6%95%B8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[PHP] 為PHP中的cURL安裝OpenSSL憑證</title>
+    <link href="https://hankz1108.github.io/posts/20231101-php-openssl/"/>
+    <id>https://hankz1108.github.io/posts/20231101-php-openssl/</id>
+    <published>2023-10-31T22:50:30.000Z</published>
+    <updated>2023-12-07T15:30:24.707Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;一、下載憑證&quot;&gt;&lt;a href=&quot;#一、下載憑證&quot; class=&quot;headerlink&quot; title=&quot;一、下載憑證&quot;&gt;&lt;/a&gt;一、下載憑證&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;點選&lt;code&gt;cacert.pem&lt;/code&gt;下載&lt;a href=&quot;https://c</summary>
+      
+    
+    
+    
+    <category term="PHP" scheme="https://hankz1108.github.io/categories/PHP/"/>
+    
+    
+    <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
+    
+    <category term="OpenSSL" scheme="https://hankz1108.github.io/tags/OpenSSL/"/>
+    
+    <category term="憑證" scheme="https://hankz1108.github.io/tags/%E6%86%91%E8%AD%89/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[其他] 軟體開發常用命名規則</title>
+    <link href="https://hankz1108.github.io/posts/20231101-other-codding-name/"/>
+    <id>https://hankz1108.github.io/posts/20231101-other-codding-name/</id>
+    <published>2023-10-31T22:24:29.000Z</published>
+    <updated>2023-12-07T15:30:24.706Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;軟體開發時應該要有固定的命名規則，以提高程式的可讀性，以JAVA命名慣例為例：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;大駝峰式：類別(Class)、界面(Interface)&lt;/li&gt;
+&lt;li&gt;小駝峰式：方法(Method)、變數(Variable)&lt;/li&gt;
+&lt;li&gt;大蛇形：常數(C</summary>
+      
+    
+    
+    
+    <category term="其他" scheme="https://hankz1108.github.io/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>[MySQL] MySQL重置密碼及修改密碼</title>
+    <link href="https://hankz1108.github.io/posts/20231030-mysql-reset-password/"/>
+    <id>https://hankz1108.github.io/posts/20231030-mysql-reset-password/</id>
+    <published>2023-10-30T09:50:29.000Z</published>
+    <updated>2023-12-07T15:30:24.705Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;此文章記錄在Linux上 MySQL重置密碼及修改密碼方式&lt;/p&gt;
+&lt;h3 id=&quot;重置密碼&quot;&gt;&lt;a href=&quot;#重置密碼&quot; class=&quot;headerlink&quot; title=&quot;重置密碼&quot;&gt;&lt;/a&gt;重置密碼&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;使用指令找到MySQL讀取的my</summary>
+      
+    
+    
+    
+    <category term="MySQL" scheme="https://hankz1108.github.io/categories/MySQL/"/>
+    
+    
+    <category term="MySQL" scheme="https://hankz1108.github.io/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[CodeIgniter] 記憶體的隱形殺手：Log all queries</title>
+    <link href="https://hankz1108.github.io/posts/20231030-ci-query-log-and-memary/"/>
+    <id>https://hankz1108.github.io/posts/20231030-ci-query-log-and-memary/</id>
+    <published>2023-10-30T09:18:57.000Z</published>
+    <updated>2023-12-07T15:30:24.704Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;一、前言&quot;&gt;&lt;a href=&quot;#一、前言&quot; class=&quot;headerlink&quot; title=&quot;一、前言&quot;&gt;&lt;/a&gt;一、前言&lt;/h3&gt;&lt;p&gt;在寫CI的時候是否曾經遇過out of memory的錯誤呢&lt;br&gt;CodeIgniter作為輕量化的PHP框架&lt;br&gt;db</summary>
+      
+    
+    
+    
+    <category term="CodeIgniter" scheme="https://hankz1108.github.io/categories/CodeIgniter/"/>
+    
+    
+    <category term="CodeIgniter" scheme="https://hankz1108.github.io/tags/CodeIgniter/"/>
+    
+    <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
+    
+    <category term="記憶體" scheme="https://hankz1108.github.io/tags/%E8%A8%98%E6%86%B6%E9%AB%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[CodeIgniter] 隱藏網址中的index.php</title>
+    <link href="https://hankz1108.github.io/posts/20231029-ci-rm-index/"/>
+    <id>https://hankz1108.github.io/posts/20231029-ci-rm-index/</id>
+    <published>2023-10-29T10:19:29.000Z</published>
+    <updated>2023-12-07T15:30:24.703Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Codeigniter如果不調整設定，網址中會自帶index.php&lt;br&gt;為了符合MVC架構，通常會將它去除，以下是處理步驟：&lt;/p&gt;
+&lt;h3 id=&quot;一、開啟伺服器的mod-rewrite&quot;&gt;&lt;a href=&quot;#一、開啟伺服器的mod-rewrite&quot; class=&quot;h</summary>
+      
+    
+    
+    
+    <category term="CodeIgniter" scheme="https://hankz1108.github.io/categories/CodeIgniter/"/>
+    
+    
+    <category term="CodeIgniter" scheme="https://hankz1108.github.io/tags/CodeIgniter/"/>
+    
+    <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[Laravel] 客製化你的Laravel: macro</title>
+    <link href="https://hankz1108.github.io/posts/20220825-laravel-macro/"/>
+    <id>https://hankz1108.github.io/posts/20220825-laravel-macro/</id>
+    <published>2022-08-24T18:55:17.000Z</published>
+    <updated>2023-12-07T15:30:24.703Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;此文章同步刊登於&lt;a href=&quot;https://blog.twjoin.com/%E5%AE%A2%E8%A3%BD%E5%8C%96%E4%BD%A0%E7%9A%84laravel-macro-a50cb917d82&quot;&gt;哲煜科技的Medium</summary>
+      
+    
+    
+    
+    
+    <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
+    
+    <category term="Laravel" scheme="https://hankz1108.github.io/tags/Laravel/"/>
+    
+    <category term="macro" scheme="https://hankz1108.github.io/tags/macro/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[其他] AD的替代品: OpenLDAP 建置與介接</title>
+    <link href="https://hankz1108.github.io/posts/20220601-other-openldap-introduction/"/>
+    <id>https://hankz1108.github.io/posts/20220601-other-openldap-introduction/</id>
+    <published>2022-05-31T19:04:24.000Z</published>
+    <updated>2023-12-07T15:30:24.703Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;此文章同步刊登於&lt;a href=&quot;https://medium.com/twjoin/%E7%AD%86%E8%A8%98-openldap-%E5%BB%BA%E7%BD%AE%E8%88%87%E4%BB%8B%E6%8E%A5-3e16175</summary>
+      
+    
+    
+    
+    <category term="其他" scheme="https://hankz1108.github.io/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    
+    <category term="OpenLDAP" scheme="https://hankz1108.github.io/tags/OpenLDAP/"/>
+    
+    <category term="LDAP" scheme="https://hankz1108.github.io/tags/LDAP/"/>
+    
+  </entry>
+  
+</feed>
