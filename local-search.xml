@@ -49,9 +49,9 @@
       
       <tag>PHP</tag>
       
-      <tag>Composer</tag>
-      
       <tag>Linux</tag>
+      
+      <tag>Composer</tag>
       
     </tags>
     
@@ -91,7 +91,7 @@
     <link href="/posts/20231117-security-hash-encoding-and-encryption/"/>
     <url>/posts/20231117-security-hash-encoding-and-encryption/</url>
     
-    <content type="html"><![CDATA[<p>首先，請讓我強調</p><h3 id="雜湊不等於編碼，編碼不等於加密，加密也不是雜湊"><a href="#雜湊不等於編碼，編碼不等於加密，加密也不是雜湊" class="headerlink" title="雜湊不等於編碼，編碼不等於加密，加密也不是雜湊!!!"></a>雜湊不等於編碼，編碼不等於加密，加密也不是雜湊!!!</h3><p>好，正文開始</p><h3 id="一、雜湊-Hash"><a href="#一、雜湊-Hash" class="headerlink" title="一、雜湊(Hash)"></a>一、雜湊(Hash)</h3><p>透過雜湊演算法將資料打亂並混合取得一個固定長度的雜湊值(Hash Values)<br>具有不可逆的特性<br>且來源資料只要有任何變動<br>生成的雜湊值也會不同<br>通常用來驗證資料的來源是否相同</p><p>例如比對檔案是否有被修改過<br>或是利用不可逆的特性<br>來存放資料庫中的密碼<br>藉此保護使用者的資料</p><p>常見的雜湊方式有：MD5(<a href="https://zh.wikipedia.org/zh-tw/MD5#%E7%BC%BA%E9%99%B7">不安全且有衝突問題</a>)、SHA-1(<a href="https://zh.wikipedia.org/zh-tw/SHA-1#SHA-1%E7%9A%84%E7%A0%B4%E8%A7%A3">不建議使用</a>)、SHA-256等</p><h3 id="二、編碼-Encoding"><a href="#二、編碼-Encoding" class="headerlink" title="二、編碼(Encoding)"></a>二、編碼(Encoding)</h3><p>定義相當廣泛<br>只要是將資料從一種型態轉變成另外一種形式<br>且過程可逆就可以算編碼<br>在資訊的領域中比較常用到的<br>是將各種字元轉譯成一個固定的格式用來方便儲存、傳輸</p><p>例如資料庫字元無法儲存特殊字元時<br>轉換只有英數字的編碼(ex：Base64)就能夠儲存了<br>或是網址無法接受空白或是一些特殊字元<br>也可以透過URL Encode變成網址支援的編碼<br>來讓網頁可以順利透過get方式傳遞資料</p><h3 id="三、加密-Encryption"><a href="#三、加密-Encryption" class="headerlink" title="三、加密(Encryption)"></a>三、加密(Encryption)</h3><p>加密是編碼的一種類型<br>它需要使用密鑰(Key)將原始資料轉換為密文<br>並且這個過程也是可逆的<br>只要擁有正確的密鑰(Key)<br>就能夠將密文轉換為原始資料<br>加密常被用於保護敏感資料<br>例如信用卡資訊、個人資料等</p><p>常見的加密方式有：<a href="https://zh.wikipedia.org/wiki/%E9%AB%98%E7%BA%A7%E5%8A%A0%E5%AF%86%E6%A0%87%E5%87%86">AES</a></p><h3 id="四、比較"><a href="#四、比較" class="headerlink" title="四、比較"></a>四、比較</h3><table><thead><tr><th align="center"></th><th align="center">雜湊</th><th align="center">編碼</th><th align="center">加密</th></tr></thead><tbody><tr><td align="center">是否可逆</td><td align="center">否</td><td align="center">是</td><td align="center">是</td></tr><tr><td align="center">是否可以保護原始資料</td><td align="center">否，僅能比對是否相同</td><td align="center">否</td><td align="center">是</td></tr><tr><td align="center">長度是否固定</td><td align="center">是</td><td align="center">否</td><td align="center">否</td></tr><tr><td align="center">主要用途</td><td align="center">快速比對資料是否相同</td><td align="center">使資料便於傳輸與儲存</td><td align="center">保護機敏資料</td></tr><tr><td align="center">具體用途</td><td align="center">1. 保存密碼 <br>2.比對檔案是否一致</td><td align="center">Http Get傳輸資料</td><td align="center">保護資料庫資料</td></tr></tbody></table><h3 id="五、結語"><a href="#五、結語" class="headerlink" title="五、結語"></a>五、結語</h3><p>總結來說<br>雜湊、編碼和加密雖然在資訊安全中扮演不同的角色<br>但很多人往往容易搞混它們的用途<br>例如用編碼或加密的方式儲存使用者密碼<br>這種在資料庫外洩的時候<br>就有可能造成使用者的密碼被駭客取得<br>這種事情已經發生過很多遍了<br>我們都應該要引以為戒才是</p>]]></content>
+    <content type="html"><![CDATA[<h3 id="雜湊不等於編碼，編碼不等於加密，加密也不是雜湊"><a href="#雜湊不等於編碼，編碼不等於加密，加密也不是雜湊" class="headerlink" title="雜湊不等於編碼，編碼不等於加密，加密也不是雜湊!!!"></a>雜湊不等於編碼，編碼不等於加密，加密也不是雜湊!!!</h3><p>為甚麼要提這件事呢?<br>請先看這篇新聞：</p><blockquote><p>國民黨台中市議員李中昨在議會質詢，秀出「近12個月交通違規檢舉量前20名」的名單。不過檢舉人的身分證字號竟只用Base64編碼轉換，長期協助企業資安保護的資安人員透露，取得身分證字號再搭配先前外洩的戶政資料，檢舉人的人身安全堪憂。…</p><p>資料來源：聯合新聞網 - <a href="https://udn.com/news/story/7314/7490929">https://udn.com/news/story/7314/7490929</a></p></blockquote><p>這件事簡單來說，就是工程師想把資料保護起來，但錯把Base64當作加密方法使用，把一個只能「轉換顯示格式」的方法，用在身分證上。<br>結果看到這些文字的人，完全不需要key(密鑰)來解密，只要經過人人都可以的還原(解碼)動作，原本的身分證就顯露出來了。<br>其實這也不是第一次發生的事情了，很多對資訊領域不甚了解的人，甚至有「部分」的資訊領域工程師仍然不具備相關的知識素養。<br>所以本篇文章就好好說明雜湊、編碼與加密的區別。</p><h3 id="一、雜湊-Hash"><a href="#一、雜湊-Hash" class="headerlink" title="一、雜湊(Hash)"></a>一、雜湊(Hash)</h3><p>透過雜湊演算法將資料打亂並混合取得一個固定長度的雜湊值(Hash Values)<br>具有不可逆的特性<br>且來源資料只要有任何變動<br>生成的雜湊值也會不同<br>通常用來驗證資料的來源是否相同</p><p>例如比對檔案是否有被修改過<br>或是利用不可逆的特性<br>來存放資料庫中的密碼<br>藉此保護使用者的資料</p><p>常見的雜湊方式有：MD5(<a href="https://zh.wikipedia.org/zh-tw/MD5#%E7%BC%BA%E9%99%B7">不安全且有衝突問題</a>)、SHA-1(<a href="https://zh.wikipedia.org/zh-tw/SHA-1#SHA-1%E7%9A%84%E7%A0%B4%E8%A7%A3">不建議使用</a>)、SHA-256等</p><h3 id="二、編碼-Encoding"><a href="#二、編碼-Encoding" class="headerlink" title="二、編碼(Encoding)"></a>二、編碼(Encoding)</h3><p>定義相當廣泛<br>只要是將資料從一種型態轉變成另外一種形式<br>且過程可逆就可以算編碼<br>在資訊的領域中比較常用到的<br>是將各種字元轉譯成一個固定的格式用來方便儲存、傳輸</p><p>例如資料庫編碼無法儲存特殊字元時<br>透過Base64轉換成只有英數字的格式就能夠儲存了<br>或是網址無法接受空白或是一些特殊字元<br>也可以透過URL Encode變成網址支援的編碼<br>來讓網頁可以順利透過get方式傳遞資料</p><p>常見的編碼方式有：<a href="https://zh.wikipedia.org/zh-tw/Base64">Base64</a></p><h3 id="三、加密-Encryption"><a href="#三、加密-Encryption" class="headerlink" title="三、加密(Encryption)"></a>三、加密(Encryption)</h3><p>加密是編碼的一種類型<br>它需要使用密鑰(Key)將原始資料轉換為密文<br>並且這個過程也是可逆的<br>只要擁有正確的密鑰(Key)<br>就能夠將密文轉換為原始資料<br>加密常被用於保護敏感資料<br>例如信用卡資訊、個人資料等</p><p>常見的加密方式有：<a href="https://zh.wikipedia.org/wiki/%E9%AB%98%E7%BA%A7%E5%8A%A0%E5%AF%86%E6%A0%87%E5%87%86">AES</a></p><h3 id="四、比較"><a href="#四、比較" class="headerlink" title="四、比較"></a>四、比較</h3><table><thead><tr><th align="center"></th><th align="center">雜湊</th><th align="center">編碼</th><th align="center">加密</th></tr></thead><tbody><tr><td align="center">是否可逆</td><td align="center">否</td><td align="center">是</td><td align="center">是</td></tr><tr><td align="center">是否可以保護原始資料</td><td align="center">否，僅能比對是否相同</td><td align="center">否</td><td align="center">是</td></tr><tr><td align="center">長度是否固定</td><td align="center">是</td><td align="center">否</td><td align="center">否</td></tr><tr><td align="center">主要用途</td><td align="center">快速比對資料是否相同</td><td align="center">使資料便於傳輸與儲存</td><td align="center">保護機敏資料</td></tr><tr><td align="center">具體用途</td><td align="center">1. 保存密碼 <br>2.比對檔案是否一致</td><td align="center">Http Get傳輸資料</td><td align="center">保護資料庫資料</td></tr></tbody></table><h3 id="五、結語"><a href="#五、結語" class="headerlink" title="五、結語"></a>五、結語</h3><p>總結來說<br>雜湊、編碼和加密雖然在資訊安全中扮演不同的角色<br>但很多人往往容易搞混它們的用途<br>例如用編碼或加密的方式儲存使用者密碼<br>這種在資料庫外洩的時候<br>就有可能造成使用者的密碼被駭客取得<br>這種事情已經發生過很多遍了<br>我們都應該要引以為戒才是</p>]]></content>
     
     
     <categories>
@@ -122,7 +122,7 @@
     <link href="/posts/20231113-vue-draggable-table-useless/"/>
     <url>/posts/20231113-vue-draggable-table-useless/</url>
     
-    <content type="html"><![CDATA[<h3 id="一、問題"><a href="#一、問題" class="headerlink" title="一、問題"></a>一、問題</h3><p>在使用<a href="https://">Sortable.js</a><a href="https://github.com/RubaXa/Sortable">Sortable.js</a>的Vue.js版本套件<a href="https://github.com/SortableJS/Vue.Draggable">Vue.Draggable</a>時<br>遇到排序div區塊沒問題，但是排序table就沒辦法拖曳排序的問題<br>程式碼如下：</p><div class="code-wrapper"><pre><code class="hljs handlebars"><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">table</span>&gt;</span></span><span class="language-xml">    <span class="hljs-tag">&lt;<span class="hljs-name">draggable</span></span></span><span class="hljs-tag"><span class="language-xml">        <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;products&quot;</span></span></span><span class="hljs-tag"><span class="language-xml">        <span class="hljs-attr">tag</span>=<span class="hljs-string">&quot;tbody&quot;</span></span></span><span class="hljs-tag"><span class="language-xml">        <span class="hljs-attr">element</span>=<span class="hljs-string">&quot;tbody&quot;</span></span></span><span class="hljs-tag"><span class="language-xml">        <span class="hljs-attr">handle</span>=<span class="hljs-string">&quot;.handle&quot;</span></span></span><span class="hljs-tag"><span class="language-xml">    &gt;</span></span><span class="language-xml">        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;product in products&quot;</span> <span class="hljs-attr">:key</span>=<span class="hljs-string">&quot;product.id&quot;</span>&gt;</span></span><span class="language-xml">            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span></span><span class="language-xml">                <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;move-icon&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;font-size: 1.5rem&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span></span><span class="language-xml">            <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span></span><span class="language-xml">            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span></span><span class="language-xml">                </span><span class="hljs-template-variable">&#123;&#123; <span class="hljs-name">product.name</span> &#125;&#125;</span><span class="language-xml"></span><span class="language-xml">            <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span></span><span class="language-xml">        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span></span><span class="language-xml">    <span class="hljs-tag">&lt;/<span class="hljs-name">draggable</span>&gt;</span></span><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span></span></code></pre></div><h3 id="二、原因"><a href="#二、原因" class="headerlink" title="二、原因"></a>二、原因</h3><p>因為這段程式碼寫在html模板的檔案中，而不是.vue檔<br>可以根據官方網站的<a href="https://v2.vuejs.org/v2/guide/components.html#DOM-Template-Parsing-Caveats">說明</a>修改<br>使用is特殊屬性：</p><div class="code-wrapper"><pre><code class="hljs routeros">&lt;tbody <span class="hljs-attribute">is</span>=<span class="hljs-string">&quot;draggable&quot;</span>&gt;</code></pre></div><p>可以達到與下列相同的效果</p><div class="code-wrapper"><pre><code class="hljs routeros">&lt;draggable <span class="hljs-attribute">tag</span>=<span class="hljs-string">&quot;tbody&quot;</span>&gt;</code></pre></div><h3 id="三、修正後的程式碼"><a href="#三、修正後的程式碼" class="headerlink" title="三、修正後的程式碼"></a>三、修正後的程式碼</h3><p>修正後的程式碼如下：</p><div class="code-wrapper"><pre><code class="hljs handlebars"><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">table</span>&gt;</span></span><span class="language-xml">    <span class="hljs-tag">&lt;<span class="hljs-name">tbody</span></span></span><span class="hljs-tag"><span class="language-xml">        <span class="hljs-attr">is</span>=<span class="hljs-string">&quot;draggable&quot;</span></span></span><span class="hljs-tag"><span class="language-xml">        <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;products&quot;</span></span></span><span class="hljs-tag"><span class="language-xml">        <span class="hljs-attr">element</span>=<span class="hljs-string">&quot;tbody&quot;</span></span></span><span class="hljs-tag"><span class="language-xml">        <span class="hljs-attr">handle</span>=<span class="hljs-string">&quot;.handle&quot;</span></span></span><span class="hljs-tag"><span class="language-xml">    &gt;</span></span><span class="language-xml">        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;product in products&quot;</span> <span class="hljs-attr">:key</span>=<span class="hljs-string">&quot;product.id&quot;</span>&gt;</span></span><span class="language-xml">            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span></span><span class="language-xml">                <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;move-icon&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;font-size: 1.5rem&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span></span><span class="language-xml">            <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span></span><span class="language-xml">            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span></span><span class="language-xml">                </span><span class="hljs-template-variable">&#123;&#123; <span class="hljs-name">product.name</span> &#125;&#125;</span><span class="language-xml"></span><span class="language-xml">            <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span></span><span class="language-xml">        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span></span><span class="language-xml">    <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span></span><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span></span></code></pre></div>]]></content>
+    <content type="html"><![CDATA[<h3 id="一、問題"><a href="#一、問題" class="headerlink" title="一、問題"></a>一、問題</h3><p>在使用<a href="https://github.com/RubaXa/Sortable">Sortable.js</a>的Vue.js版本套件<a href="https://github.com/SortableJS/Vue.Draggable">Vue.Draggable</a>時<br>遇到排序div區塊沒問題，但是排序table就沒辦法拖曳排序的問題<br>程式碼如下：</p><div class="code-wrapper"><pre><code class="hljs handlebars"><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">table</span>&gt;</span></span><span class="language-xml">    <span class="hljs-tag">&lt;<span class="hljs-name">draggable</span></span></span><span class="hljs-tag"><span class="language-xml">        <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;products&quot;</span></span></span><span class="hljs-tag"><span class="language-xml">        <span class="hljs-attr">tag</span>=<span class="hljs-string">&quot;tbody&quot;</span></span></span><span class="hljs-tag"><span class="language-xml">        <span class="hljs-attr">element</span>=<span class="hljs-string">&quot;tbody&quot;</span></span></span><span class="hljs-tag"><span class="language-xml">        <span class="hljs-attr">handle</span>=<span class="hljs-string">&quot;.handle&quot;</span></span></span><span class="hljs-tag"><span class="language-xml">    &gt;</span></span><span class="language-xml">        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;product in products&quot;</span> <span class="hljs-attr">:key</span>=<span class="hljs-string">&quot;product.id&quot;</span>&gt;</span></span><span class="language-xml">            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span></span><span class="language-xml">                <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;move-icon&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;font-size: 1.5rem&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span></span><span class="language-xml">            <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span></span><span class="language-xml">            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span></span><span class="language-xml">                </span><span class="hljs-template-variable">&#123;&#123; <span class="hljs-name">product.name</span> &#125;&#125;</span><span class="language-xml"></span><span class="language-xml">            <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span></span><span class="language-xml">        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span></span><span class="language-xml">    <span class="hljs-tag">&lt;/<span class="hljs-name">draggable</span>&gt;</span></span><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span></span></code></pre></div><h3 id="二、原因"><a href="#二、原因" class="headerlink" title="二、原因"></a>二、原因</h3><p>因為這段程式碼寫在html模板的檔案中，而不是.vue檔<br>可以根據官方網站的<a href="https://v2.vuejs.org/v2/guide/components.html#DOM-Template-Parsing-Caveats">說明</a>修改<br>使用is特殊屬性：</p><div class="code-wrapper"><pre><code class="hljs routeros">&lt;tbody <span class="hljs-attribute">is</span>=<span class="hljs-string">&quot;draggable&quot;</span>&gt;</code></pre></div><p>可以達到與下列相同的效果</p><div class="code-wrapper"><pre><code class="hljs routeros">&lt;draggable <span class="hljs-attribute">tag</span>=<span class="hljs-string">&quot;tbody&quot;</span>&gt;</code></pre></div><h3 id="三、修正後的程式碼"><a href="#三、修正後的程式碼" class="headerlink" title="三、修正後的程式碼"></a>三、修正後的程式碼</h3><p>修正後的程式碼如下：</p><div class="code-wrapper"><pre><code class="hljs handlebars"><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">table</span>&gt;</span></span><span class="language-xml">    <span class="hljs-tag">&lt;<span class="hljs-name">tbody</span></span></span><span class="hljs-tag"><span class="language-xml">        <span class="hljs-attr">is</span>=<span class="hljs-string">&quot;draggable&quot;</span></span></span><span class="hljs-tag"><span class="language-xml">        <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;products&quot;</span></span></span><span class="hljs-tag"><span class="language-xml">        <span class="hljs-attr">element</span>=<span class="hljs-string">&quot;tbody&quot;</span></span></span><span class="hljs-tag"><span class="language-xml">        <span class="hljs-attr">handle</span>=<span class="hljs-string">&quot;.handle&quot;</span></span></span><span class="hljs-tag"><span class="language-xml">    &gt;</span></span><span class="language-xml">        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;product in products&quot;</span> <span class="hljs-attr">:key</span>=<span class="hljs-string">&quot;product.id&quot;</span>&gt;</span></span><span class="language-xml">            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span></span><span class="language-xml">                <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;move-icon&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;font-size: 1.5rem&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span></span><span class="language-xml">            <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span></span><span class="language-xml">            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span></span><span class="language-xml">                </span><span class="hljs-template-variable">&#123;&#123; <span class="hljs-name">product.name</span> &#125;&#125;</span><span class="language-xml"></span><span class="language-xml">            <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span></span><span class="language-xml">        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span></span><span class="language-xml">    <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span></span><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span></span></code></pre></div>]]></content>
     
     
     <categories>
@@ -219,9 +219,9 @@
     
     <tags>
       
-      <tag>PHP</tag>
-      
       <tag>Laravel</tag>
+      
+      <tag>PHP</tag>
       
       <tag>AWS</tag>
       
@@ -252,9 +252,9 @@
     
     <tags>
       
-      <tag>CodeIgniter</tag>
-      
       <tag>PHP</tag>
+      
+      <tag>CodeIgniter</tag>
       
       <tag>Windows</tag>
       
@@ -285,9 +285,9 @@
     
     <tags>
       
-      <tag>CodeIgniter</tag>
-      
       <tag>PHP</tag>
+      
+      <tag>CodeIgniter</tag>
       
       <tag>Windows</tag>
       
@@ -420,9 +420,9 @@
     
     <tags>
       
-      <tag>CodeIgniter</tag>
-      
       <tag>PHP</tag>
+      
+      <tag>CodeIgniter</tag>
       
       <tag>記憶體</tag>
       
@@ -449,9 +449,9 @@
     
     <tags>
       
-      <tag>CodeIgniter</tag>
-      
       <tag>PHP</tag>
+      
+      <tag>CodeIgniter</tag>
       
     </tags>
     
@@ -470,9 +470,9 @@
     
     <tags>
       
-      <tag>PHP</tag>
-      
       <tag>Laravel</tag>
+      
+      <tag>PHP</tag>
       
       <tag>macro</tag>
       
