@@ -6,7 +6,7 @@
   <link href="https://hankz1108.github.io/atom.xml" rel="self"/>
   
   <link href="https://hankz1108.github.io/"/>
-  <updated>2023-12-19T17:38:41.005Z</updated>
+  <updated>2024-01-16T16:27:45.653Z</updated>
   <id>https://hankz1108.github.io/</id>
   
   <author>
@@ -17,16 +17,42 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>[Hexo] 使用Docker Compose快速架設Hexo環境</title>
+    <link href="https://hankz1108.github.io/posts/20240116-hexo-docker-compose/"/>
+    <id>https://hankz1108.github.io/posts/20240116-hexo-docker-compose/</id>
+    <published>2024-01-16T15:22:34.000Z</published>
+    <updated>2024-01-16T16:27:45.653Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;因為我希望可以在我平常會使用的不同設備中，輕鬆的使用&lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;撰寫部落格，而不用</summary>
+      
+    
+    
+    
+    <category term="Hexo" scheme="https://hankz1108.github.io/categories/Hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://hankz1108.github.io/tags/Hexo/"/>
+    
+    <category term="Docker" scheme="https://hankz1108.github.io/tags/Docker/"/>
+    
+    <category term="Docker Compose" scheme="https://hankz1108.github.io/tags/Docker-Compose/"/>
+    
+  </entry>
+  
+  <entry>
     <title>[Hexo] 常用外掛(plugin)推薦</title>
     <link href="https://hankz1108.github.io/posts/20231220-hexo-plugin-recommend/"/>
     <id>https://hankz1108.github.io/posts/20231220-hexo-plugin-recommend/</id>
     <published>2023-12-19T16:07:57.000Z</published>
-    <updated>2023-12-19T17:38:41.005Z</updated>
+    <updated>2024-01-16T16:16:19.524Z</updated>
     
     
       
       
-    <summary type="html">&lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;本站是使用&lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;架設的，這是一個靜態網站&amp;#x2F;部落格的生成器，並支援m</summary>
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;本站是使用&lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;架設的，這是一個靜態網站&amp;#x2F;部落格的生成器，並支援m</summary>
       
     
     
@@ -182,11 +208,11 @@
     <category term="Batch" scheme="https://hankz1108.github.io/categories/Batch/"/>
     
     
+    <category term="Windows" scheme="https://hankz1108.github.io/tags/Windows/"/>
+    
     <category term="Batch" scheme="https://hankz1108.github.io/tags/Batch/"/>
     
     <category term="bat" scheme="https://hankz1108.github.io/tags/bat/"/>
-    
-    <category term="Windows" scheme="https://hankz1108.github.io/tags/Windows/"/>
     
   </entry>
   
@@ -236,9 +262,9 @@
     <category term="AWS" scheme="https://hankz1108.github.io/categories/AWS/"/>
     
     
-    <category term="Laravel" scheme="https://hankz1108.github.io/tags/Laravel/"/>
-    
     <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
+    
+    <category term="Laravel" scheme="https://hankz1108.github.io/tags/Laravel/"/>
     
     <category term="AWS" scheme="https://hankz1108.github.io/tags/AWS/"/>
     
@@ -267,11 +293,11 @@
     <category term="PHP" scheme="https://hankz1108.github.io/categories/PHP/"/>
     
     
-    <category term="Windows" scheme="https://hankz1108.github.io/tags/Windows/"/>
+    <category term="CodeIgniter" scheme="https://hankz1108.github.io/tags/CodeIgniter/"/>
     
     <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
     
-    <category term="CodeIgniter" scheme="https://hankz1108.github.io/tags/CodeIgniter/"/>
+    <category term="Windows" scheme="https://hankz1108.github.io/tags/Windows/"/>
     
     <category term="MsSQL" scheme="https://hankz1108.github.io/tags/MsSQL/"/>
     
@@ -298,11 +324,11 @@
     <category term="PHP" scheme="https://hankz1108.github.io/categories/PHP/"/>
     
     
-    <category term="Windows" scheme="https://hankz1108.github.io/tags/Windows/"/>
+    <category term="CodeIgniter" scheme="https://hankz1108.github.io/tags/CodeIgniter/"/>
     
     <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
     
-    <category term="CodeIgniter" scheme="https://hankz1108.github.io/tags/CodeIgniter/"/>
+    <category term="Windows" scheme="https://hankz1108.github.io/tags/Windows/"/>
     
     <category term="Oracle" scheme="https://hankz1108.github.io/tags/Oracle/"/>
     
@@ -327,11 +353,11 @@
     <category term="Batch" scheme="https://hankz1108.github.io/categories/Batch/"/>
     
     
+    <category term="Windows" scheme="https://hankz1108.github.io/tags/Windows/"/>
+    
     <category term="Batch" scheme="https://hankz1108.github.io/tags/Batch/"/>
     
     <category term="bat" scheme="https://hankz1108.github.io/tags/bat/"/>
-    
-    <category term="Windows" scheme="https://hankz1108.github.io/tags/Windows/"/>
     
     <category term="環境變數" scheme="https://hankz1108.github.io/tags/%E7%92%B0%E5%A2%83%E8%AE%8A%E6%95%B8/"/>
     
@@ -430,9 +456,9 @@
     <category term="CodeIgniter" scheme="https://hankz1108.github.io/categories/CodeIgniter/"/>
     
     
-    <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
-    
     <category term="CodeIgniter" scheme="https://hankz1108.github.io/tags/CodeIgniter/"/>
+    
+    <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
     
     <category term="記憶體" scheme="https://hankz1108.github.io/tags/%E8%A8%98%E6%86%B6%E9%AB%94/"/>
     
@@ -457,9 +483,9 @@
     <category term="CodeIgniter" scheme="https://hankz1108.github.io/categories/CodeIgniter/"/>
     
     
-    <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
-    
     <category term="CodeIgniter" scheme="https://hankz1108.github.io/tags/CodeIgniter/"/>
+    
+    <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
     
   </entry>
   
@@ -480,9 +506,9 @@
     
     
     
-    <category term="Laravel" scheme="https://hankz1108.github.io/tags/Laravel/"/>
-    
     <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
+    
+    <category term="Laravel" scheme="https://hankz1108.github.io/tags/Laravel/"/>
     
     <category term="macro" scheme="https://hankz1108.github.io/tags/macro/"/>
     

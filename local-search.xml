@@ -4,11 +4,40 @@
   
   
   <entry>
+    <title>[Hexo] 使用Docker Compose快速架設Hexo環境</title>
+    <link href="/posts/20240116-hexo-docker-compose/"/>
+    <url>/posts/20240116-hexo-docker-compose/</url>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>因為我希望可以在我平常會使用的不同設備中，輕鬆的使用<a href="https://hexo.io/">Hexo</a>撰寫部落格，而不用擔心環境設定的問題。</p><p>自然而然的我就想要利用Docker來免去環境建置的煩惱，而且只要在我需要的設備上下載這個Docker Compose並執行，就可以簡單地開始撰寫Hexo Blog，這樣剛好出現的靈感就可以馬上記錄下來，相當方便。</p><p>使用了一段時間之後，感覺這個Docker Compose使用上也逐漸穩定，剛好朋友也想要玩玩看Hexo，於是我就將這個寫好的Docker Compose給分享出來。</p><p>如果有需要的人盡量拿去使用，當然如果有發現問題，或是有甚麼希望我改善的地方，也歡迎透過我的<a href="https://github.com/hankz1108/hexo-docker-compose">GitHub</a>中的Issues功能提出。</p><blockquote><p>該專案的靈感來自 <a href="https://github.com/spurin/docker-hexo">spurin&#x2F;docker-hexo</a>，並對其功能進行了調整。</p></blockquote><h2 id="一、安裝"><a href="#一、安裝" class="headerlink" title="一、安裝"></a>一、安裝</h2><p>只要電腦有安裝Docker Compose的環境下載就可以直接使用，</p><h3 id="GitHub下載"><a href="#GitHub下載" class="headerlink" title="GitHub下載"></a>GitHub下載</h3><p>您可以直接透過<a href="https://github.com/hankz1108/hexo-docker-compose">GitHub</a>下載本專案<br><img src="https://github.com/hankz1108/hexo-docker-compose/raw/main/docs/images/installation-github-download-1.jpg" alt="image"></p><h3 id="git-clone取得"><a href="#git-clone取得" class="headerlink" title="git clone取得"></a>git clone取得</h3><p>也可以透過<code>git clone</code>取得</p><div class="code-wrapper"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://github.com/hankz1108/hexo-docker-compose.git my-hexo<span class="hljs-built_in">cd</span> my-hexo</code></pre></div><h2 id="二、配置"><a href="#二、配置" class="headerlink" title="二、配置"></a>二、配置</h2><p>複製根目錄中的<code>.env.example</code>並重新命名為<code>.env</code>，並填寫其中的選項</p><div class="code-wrapper"><pre><code class="hljs ini"><span class="hljs-comment">#=========== 必須的設定 ==========#</span><span class="hljs-comment"># hexo要對到本地主機的port</span>SITE_PORT=<span class="hljs-comment"># 時區(ex:Asia/Taipei)</span>TIME_ZONE=<span class="hljs-comment">#========= 發布需要的設定 =========#</span><span class="hljs-comment"># git使用者名稱</span>GIT_USER=<span class="hljs-comment"># git使用者email</span>GIT_EMAIL=<span class="hljs-comment"># github token(發佈到github pages需要)</span>GITHUB_TOKEN=</code></pre></div><h2 id="三、啟動"><a href="#三、啟動" class="headerlink" title="三、啟動"></a>三、啟動</h2><p>需要在根目錄建立一個空的<code>app</code>資料夾，或是將現有的hexo目錄放進來，結構應該是這樣的</p><div class="code-wrapper"><pre><code class="hljs 1c">app├── _config.yml├── package.json├── scaffolds├── source<span class="hljs-string">|   ├── _drafts</span><span class="hljs-string">|   └── _posts</span>└── themes</code></pre></div><p>接下來打開終端機，執行<code>docker compose</code>建立&amp;啟動容器</p><div class="code-wrapper"><pre><code class="hljs bash">docker compose up -d</code></pre></div><p>啟動成功後就可以在<code>http://localhost:&lt;your_prot&gt;</code>看到你的hexo了</p><blockquote><p>如果docker啟動失敗，且出現以下錯誤訊息：</p><div class="code-wrapper"><pre><code class="hljs stata">/init/init.<span class="hljs-keyword">sh</span>: 9: <span class="hljs-keyword">Syntax</span> <span class="hljs-keyword">error</span>: <span class="hljs-string">&quot;fi&quot;</span> unexpected (expecting <span class="hljs-string">&quot;then&quot;</span>)</code></pre></div><p>有可能是windows系統與Linux換行符號不同導致的<br>嘗試將<code>hexo\init\init.sh</code>與其他需要在<code>container</code>執行的文字檔全部改為LF結尾<br>再刪除<code>container</code>與<code>image</code>後重新執行<code>docker compose up -d</code></p></blockquote><h2 id="四、發布設定"><a href="#四、發布設定" class="headerlink" title="四、發布設定"></a>四、發布設定</h2><p>如果你要使用<code>hexo-deployer-git</code>進行網站發布，以下是<code>github pages</code>設定範例。</p><div class="code-wrapper"><pre><code class="hljs yaml"><span class="hljs-attr">deploy:</span>  <span class="hljs-attr">type:</span> <span class="hljs-string">git</span>  <span class="hljs-attr">repo:</span>    <span class="hljs-attr">github:</span>    <span class="hljs-attr">url:</span> <span class="hljs-string">https://github.com/username/github_page.github.io.git</span>    <span class="hljs-attr">branch:</span> <span class="hljs-string">master</span>    <span class="hljs-attr">token:</span> <span class="hljs-string">$GITHUB_TOKEN</span>  <span class="hljs-attr">name:</span> <span class="hljs-string">$GIT_USER</span>  <span class="hljs-attr">email:</span> <span class="hljs-string">$GIT_EMAIL</span></code></pre></div><h2 id="五、自訂啟動腳本"><a href="#五、自訂啟動腳本" class="headerlink" title="五、自訂啟動腳本"></a>五、自訂啟動腳本</h2><p>您可以在<code>hexo\init\scripts</code>底下建立任意名稱的<code>*.sh</code>檔案<br>腳本會自動執行該資料夾底下以<code>.sh</code>結尾的檔案<br>讓您可以在hexo伺服器執行前先執行您想要的腳本</p><h2 id="延伸閱讀"><a href="#延伸閱讀" class="headerlink" title="延伸閱讀"></a>延伸閱讀</h2><p>建置完畢後，也可以來看看我<a href="/posts/20231220-hexo-plugin-recommend/" title="[Hexo] 常用外掛(plugin)推薦">推薦的外掛(plugin)</a><br>裡面包含方便部屬與各種強化SEO的套件</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Hexo</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Hexo</tag>
+      
+      <tag>Docker</tag>
+      
+      <tag>Docker Compose</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>[Hexo] 常用外掛(plugin)推薦</title>
     <link href="/posts/20231220-hexo-plugin-recommend/"/>
     <url>/posts/20231220-hexo-plugin-recommend/</url>
     
-    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>本站是使用<a href="https://hexo.io/">Hexo</a>架設的，這是一個靜態網站&#x2F;部落格的生成器，並支援markdown語法生成網頁內容。<br>除此之外還擁有許多第三方的主題與外掛，使用人數眾多、資源也相當好找，這是我選擇它的原因。<br>本篇要介紹的是目前有在使用，且相對比較推薦的外掛(plugin)。</p><h3 id="一、推薦套件"><a href="#一、推薦套件" class="headerlink" title="一、推薦套件"></a>一、推薦套件</h3><h4 id="1-hexo-deployer-git"><a href="#1-hexo-deployer-git" class="headerlink" title="1. hexo-deployer-git"></a>1. <a href="https://github.com/hexojs/hexo-deployer-git">hexo-deployer-git</a></h4><p>這是透過git部署的必備plugin，安裝後可以透過在<code>_config.yml</code>設定<code>deploy</code>的內容<br>先執行指令安裝套件：</p><div class="code-wrapper"><pre><code class="hljs bash">npm install hexo-deployer-git --save</code></pre></div><p>之後開啟<code>_config.yml</code>根據需求進行設定：</p><div class="code-wrapper"><pre><code class="hljs yaml"><span class="hljs-attr">deploy:</span><span class="hljs-attr">type:</span> <span class="hljs-string">git</span><span class="hljs-attr">repo:</span>    <span class="hljs-attr">github:</span>    <span class="hljs-attr">url:</span> <span class="hljs-string">https://github.com/&lt;USERNAME&gt;/&lt;REPOSITORY_NAME&gt;</span>    <span class="hljs-attr">branch:</span> <span class="hljs-string">master</span>    <span class="hljs-attr">token:</span> <span class="hljs-string">&lt;GITHUB_TOKEN&gt;</span><span class="hljs-attr">name:</span> <span class="hljs-string">&lt;GIT_USERNAME&gt;</span><span class="hljs-attr">email:</span> <span class="hljs-string">&lt;GIT_EMAIL&gt;</span></code></pre></div><p>設定完成後就可以執行指令透過git進行部署</p><div class="code-wrapper"><pre><code class="hljs bash">hexo clean &amp;&amp; hexo deploy</code></pre></div><h4 id="2-hexo-generator-sitemap"><a href="#2-hexo-generator-sitemap" class="headerlink" title="2. hexo-generator-sitemap"></a>2. <a href="https://github.com/hexojs/hexo-generator-sitemap">hexo-generator-sitemap</a></h4><p>這是可以自動產生網站Sitemap的plugin，對於SEO會比較友好。<br>先執行指令安裝套件：</p><div class="code-wrapper"><pre><code class="hljs bash">npm install hexo-generator-sitemap --save</code></pre></div><p>之後開啟<code>_config.yml</code>根據需求進行設定：</p><div class="code-wrapper"><pre><code class="hljs yaml"><span class="hljs-attr">sitemap:</span>    <span class="hljs-attr">path:</span> <span class="hljs-string">sitemap.xml</span>    <span class="hljs-attr">template:</span>    <span class="hljs-attr">rel:</span> <span class="hljs-literal">true</span>    <span class="hljs-attr">tags:</span> <span class="hljs-literal">true</span>    <span class="hljs-attr">categories:</span> <span class="hljs-literal">true</span></code></pre></div><p>之後部署後就會自動生成sitemap.xml這個檔案了</p><h4 id="3-hexo-all-minifier"><a href="#3-hexo-all-minifier" class="headerlink" title="3. hexo-all-minifier"></a>3. <a href="https://github.com/chenzhutian/hexo-all-minifier">hexo-all-minifier</a></h4><p>這個plugin整合了多個plugin，用途都是縮小各種檔案類型，以加快網站載入速度，該套件包含：</p><ul><li><a href="https://github.com/hexojs/hexo-html-minifier">hexo-html-minifier</a></li><li><a href="https://github.com/hexojs/hexo-clean-css">hexo-clean-css</a></li><li><a href="https://github.com/hexojs/hexo-uglify">hexo-uglify</a></li><li><a href="https://github.com/vseventer/hexo-imagemin">hexo-imagemin</a></li></ul><p>先執行指令安裝套件：</p><div class="code-wrapper"><pre><code class="hljs bash">npm install hexo-generator-sitemap --save</code></pre></div><p>如果是mac的使用者需要額外安裝其他東西</p><div class="code-wrapper"><pre><code class="hljs bash">brew install libtool automake autoconf nasm</code></pre></div><p>之後開啟<code>_config.yml</code>開啟該功能：</p><div class="code-wrapper"><pre><code class="hljs yaml"><span class="hljs-attr">all_minifier:</span> <span class="hljs-literal">true</span></code></pre></div><p>也可以針對每個套件詳細設定</p><div class="code-wrapper"><pre><code class="hljs yaml"><span class="hljs-attr">js_concator:</span>    <span class="hljs-attr">enable:</span> <span class="hljs-literal">false</span>    <span class="hljs-attr">bundle_path:</span> <span class="hljs-string">&#x27;/js/bundle.js&#x27;</span>    <span class="hljs-attr">front:</span> <span class="hljs-literal">false</span>    <span class="hljs-attr">silent:</span> <span class="hljs-literal">false</span><span class="hljs-attr">html_minifier:</span>    <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span>    <span class="hljs-attr">ignore_error:</span> <span class="hljs-literal">false</span>    <span class="hljs-attr">silent:</span> <span class="hljs-literal">false</span><span class="hljs-attr">css_minifier:</span>    <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span>    <span class="hljs-attr">silent:</span> <span class="hljs-literal">false</span>    <span class="hljs-attr">exclude:</span>        <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;*.min.css&#x27;</span><span class="hljs-attr">js_minifier:</span>    <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span>    <span class="hljs-attr">mangle:</span> <span class="hljs-literal">true</span>    <span class="hljs-attr">silent:</span> <span class="hljs-literal">false</span>    <span class="hljs-attr">output:</span>    <span class="hljs-attr">compress:</span>    <span class="hljs-attr">exclude:</span>        <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;*.min.js&#x27;</span><span class="hljs-attr">image_minifier:</span>    <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span>    <span class="hljs-attr">interlaced:</span> <span class="hljs-literal">false</span>    <span class="hljs-attr">multipass:</span> <span class="hljs-literal">false</span>    <span class="hljs-attr">optimizationLevel:</span> <span class="hljs-number">2</span>    <span class="hljs-attr">pngquant:</span> <span class="hljs-literal">false</span>    <span class="hljs-attr">progressive:</span> <span class="hljs-literal">false</span>    <span class="hljs-attr">silent:</span> <span class="hljs-literal">false</span>    <span class="hljs-attr">exclude:</span></code></pre></div><h4 id="4-hexo-filter-nofollow"><a href="#4-hexo-filter-nofollow" class="headerlink" title="4. hexo-filter-nofollow"></a>4. <a href="https://github.com/hexojs/hexo-filter-nofollow">hexo-filter-nofollow</a></h4><p>加入<code>rel=&quot;noopener external nofollow noreferrer&quot;</code>到外部連結上，可以優化SEO，避免權重流失。<br>先執行指令安裝套件：</p><div class="code-wrapper"><pre><code class="hljs bash">npm i hexo-filter-nofollow --save</code></pre></div><p>之後開啟<code>_config.yml</code>根據需求進行設定：</p><div class="code-wrapper"><pre><code class="hljs yaml"><span class="hljs-attr">nofollow:</span>    <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span>    <span class="hljs-attr">field:</span> <span class="hljs-string">site</span>    <span class="hljs-attr">exclude:</span></code></pre></div><h3 id="二、主題-Theme"><a href="#二、主題-Theme" class="headerlink" title="二、主題(Theme)"></a>二、主題(Theme)</h3><p>我使用<a href="https://hexo.fluid-dev.com/">Fluid</a>作為我的Theme，詳細的使用方式可以參考<a href="https://hexo.fluid-dev.com/docs/guide/">官方文件</a>，在此不多做贅述。</p><h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><blockquote><p><a href="https://github.com/hankz1108/hexo-docker-compose">hexo-docker-compose</a><br>Hexo 6.3.0</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本站是使用<a href="https://hexo.io/">Hexo</a>架設的，這是一個靜態網站&#x2F;部落格的生成器，並支援markdown語法生成網頁內容。<br>除此之外還擁有許多第三方的主題與外掛，使用人數眾多、資源也相當好找，這是我選擇它的原因。<br>本篇要介紹的是目前有在使用，且相對比較推薦的外掛(plugin)。</p><h2 id="一、推薦套件"><a href="#一、推薦套件" class="headerlink" title="一、推薦套件"></a>一、推薦套件</h2><h3 id="1-hexo-deployer-git"><a href="#1-hexo-deployer-git" class="headerlink" title="1. hexo-deployer-git"></a>1. <a href="https://github.com/hexojs/hexo-deployer-git">hexo-deployer-git</a></h3><p>這是透過git部署的必備plugin，安裝後可以透過在<code>_config.yml</code>設定<code>deploy</code>的內容<br>先執行指令安裝套件：</p><div class="code-wrapper"><pre><code class="hljs bash">npm install hexo-deployer-git --save</code></pre></div><p>之後開啟<code>_config.yml</code>根據需求進行設定：</p><div class="code-wrapper"><pre><code class="hljs yaml"><span class="hljs-attr">deploy:</span><span class="hljs-attr">type:</span> <span class="hljs-string">git</span><span class="hljs-attr">repo:</span>    <span class="hljs-attr">github:</span>    <span class="hljs-attr">url:</span> <span class="hljs-string">https://github.com/&lt;USERNAME&gt;/&lt;REPOSITORY_NAME&gt;</span>    <span class="hljs-attr">branch:</span> <span class="hljs-string">master</span>    <span class="hljs-attr">token:</span> <span class="hljs-string">&lt;GITHUB_TOKEN&gt;</span><span class="hljs-attr">name:</span> <span class="hljs-string">&lt;GIT_USERNAME&gt;</span><span class="hljs-attr">email:</span> <span class="hljs-string">&lt;GIT_EMAIL&gt;</span></code></pre></div><p>設定完成後就可以執行指令透過git進行部署</p><div class="code-wrapper"><pre><code class="hljs bash">hexo clean &amp;&amp; hexo deploy</code></pre></div><h3 id="2-hexo-generator-sitemap"><a href="#2-hexo-generator-sitemap" class="headerlink" title="2. hexo-generator-sitemap"></a>2. <a href="https://github.com/hexojs/hexo-generator-sitemap">hexo-generator-sitemap</a></h3><p>這是可以自動產生網站Sitemap的plugin，對於SEO會比較友好。<br>先執行指令安裝套件：</p><div class="code-wrapper"><pre><code class="hljs bash">npm install hexo-generator-sitemap --save</code></pre></div><p>之後開啟<code>_config.yml</code>根據需求進行設定：</p><div class="code-wrapper"><pre><code class="hljs yaml"><span class="hljs-attr">sitemap:</span>    <span class="hljs-attr">path:</span> <span class="hljs-string">sitemap.xml</span>    <span class="hljs-attr">template:</span>    <span class="hljs-attr">rel:</span> <span class="hljs-literal">true</span>    <span class="hljs-attr">tags:</span> <span class="hljs-literal">true</span>    <span class="hljs-attr">categories:</span> <span class="hljs-literal">true</span></code></pre></div><p>之後部署後就會自動生成sitemap.xml這個檔案了</p><h3 id="3-hexo-all-minifier"><a href="#3-hexo-all-minifier" class="headerlink" title="3. hexo-all-minifier"></a>3. <a href="https://github.com/chenzhutian/hexo-all-minifier">hexo-all-minifier</a></h3><p>這個plugin整合了多個plugin，用途都是縮小各種檔案類型，以加快網站載入速度，該套件包含：</p><ul><li><a href="https://github.com/hexojs/hexo-html-minifier">hexo-html-minifier</a></li><li><a href="https://github.com/hexojs/hexo-clean-css">hexo-clean-css</a></li><li><a href="https://github.com/hexojs/hexo-uglify">hexo-uglify</a></li><li><a href="https://github.com/vseventer/hexo-imagemin">hexo-imagemin</a></li></ul><p>先執行指令安裝套件：</p><div class="code-wrapper"><pre><code class="hljs bash">npm install hexo-generator-sitemap --save</code></pre></div><p>如果是mac的使用者需要額外安裝其他東西</p><div class="code-wrapper"><pre><code class="hljs bash">brew install libtool automake autoconf nasm</code></pre></div><p>之後開啟<code>_config.yml</code>開啟該功能：</p><div class="code-wrapper"><pre><code class="hljs yaml"><span class="hljs-attr">all_minifier:</span> <span class="hljs-literal">true</span></code></pre></div><p>也可以針對每個套件詳細設定</p><div class="code-wrapper"><pre><code class="hljs yaml"><span class="hljs-attr">js_concator:</span>    <span class="hljs-attr">enable:</span> <span class="hljs-literal">false</span>    <span class="hljs-attr">bundle_path:</span> <span class="hljs-string">&#x27;/js/bundle.js&#x27;</span>    <span class="hljs-attr">front:</span> <span class="hljs-literal">false</span>    <span class="hljs-attr">silent:</span> <span class="hljs-literal">false</span><span class="hljs-attr">html_minifier:</span>    <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span>    <span class="hljs-attr">ignore_error:</span> <span class="hljs-literal">false</span>    <span class="hljs-attr">silent:</span> <span class="hljs-literal">false</span><span class="hljs-attr">css_minifier:</span>    <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span>    <span class="hljs-attr">silent:</span> <span class="hljs-literal">false</span>    <span class="hljs-attr">exclude:</span>        <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;*.min.css&#x27;</span><span class="hljs-attr">js_minifier:</span>    <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span>    <span class="hljs-attr">mangle:</span> <span class="hljs-literal">true</span>    <span class="hljs-attr">silent:</span> <span class="hljs-literal">false</span>    <span class="hljs-attr">output:</span>    <span class="hljs-attr">compress:</span>    <span class="hljs-attr">exclude:</span>        <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;*.min.js&#x27;</span><span class="hljs-attr">image_minifier:</span>    <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span>    <span class="hljs-attr">interlaced:</span> <span class="hljs-literal">false</span>    <span class="hljs-attr">multipass:</span> <span class="hljs-literal">false</span>    <span class="hljs-attr">optimizationLevel:</span> <span class="hljs-number">2</span>    <span class="hljs-attr">pngquant:</span> <span class="hljs-literal">false</span>    <span class="hljs-attr">progressive:</span> <span class="hljs-literal">false</span>    <span class="hljs-attr">silent:</span> <span class="hljs-literal">false</span>    <span class="hljs-attr">exclude:</span></code></pre></div><h3 id="4-hexo-filter-nofollow"><a href="#4-hexo-filter-nofollow" class="headerlink" title="4. hexo-filter-nofollow"></a>4. <a href="https://github.com/hexojs/hexo-filter-nofollow">hexo-filter-nofollow</a></h3><p>加入<code>rel=&quot;noopener external nofollow noreferrer&quot;</code>到外部連結上，可以優化SEO，避免權重流失。<br>先執行指令安裝套件：</p><div class="code-wrapper"><pre><code class="hljs bash">npm i hexo-filter-nofollow --save</code></pre></div><p>之後開啟<code>_config.yml</code>根據需求進行設定：</p><div class="code-wrapper"><pre><code class="hljs yaml"><span class="hljs-attr">nofollow:</span>    <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span>    <span class="hljs-attr">field:</span> <span class="hljs-string">site</span>    <span class="hljs-attr">exclude:</span></code></pre></div><h2 id="二、主題-Theme"><a href="#二、主題-Theme" class="headerlink" title="二、主題(Theme)"></a>二、主題(Theme)</h2><p>我使用<a href="https://hexo.fluid-dev.com/">Fluid</a>作為我的Theme，詳細的使用方式可以參考<a href="https://hexo.fluid-dev.com/docs/guide/">官方文件</a>，在此不多做贅述。</p><h2 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h2><blockquote><p><a href="https://github.com/hankz1108/hexo-docker-compose">hexo-docker-compose</a><br>Hexo 6.3.0</p></blockquote>]]></content>
     
     
     <categories>
@@ -184,11 +213,11 @@
     
     <tags>
       
+      <tag>Windows</tag>
+      
       <tag>Batch</tag>
       
       <tag>bat</tag>
-      
-      <tag>Windows</tag>
       
     </tags>
     
@@ -244,9 +273,9 @@
     
     <tags>
       
-      <tag>Laravel</tag>
-      
       <tag>PHP</tag>
+      
+      <tag>Laravel</tag>
       
       <tag>AWS</tag>
       
@@ -277,11 +306,11 @@
     
     <tags>
       
-      <tag>Windows</tag>
+      <tag>CodeIgniter</tag>
       
       <tag>PHP</tag>
       
-      <tag>CodeIgniter</tag>
+      <tag>Windows</tag>
       
       <tag>MsSQL</tag>
       
@@ -310,11 +339,11 @@
     
     <tags>
       
-      <tag>Windows</tag>
+      <tag>CodeIgniter</tag>
       
       <tag>PHP</tag>
       
-      <tag>CodeIgniter</tag>
+      <tag>Windows</tag>
       
       <tag>Oracle</tag>
       
@@ -341,11 +370,11 @@
     
     <tags>
       
+      <tag>Windows</tag>
+      
       <tag>Batch</tag>
       
       <tag>bat</tag>
-      
-      <tag>Windows</tag>
       
       <tag>環境變數</tag>
       
@@ -445,9 +474,9 @@
     
     <tags>
       
-      <tag>PHP</tag>
-      
       <tag>CodeIgniter</tag>
+      
+      <tag>PHP</tag>
       
       <tag>記憶體</tag>
       
@@ -474,9 +503,9 @@
     
     <tags>
       
-      <tag>PHP</tag>
-      
       <tag>CodeIgniter</tag>
+      
+      <tag>PHP</tag>
       
     </tags>
     
@@ -495,9 +524,9 @@
     
     <tags>
       
-      <tag>Laravel</tag>
-      
       <tag>PHP</tag>
+      
+      <tag>Laravel</tag>
       
       <tag>macro</tag>
       
