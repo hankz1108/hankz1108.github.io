@@ -6,7 +6,7 @@
   <link href="https://hankz1108.github.io/atom.xml" rel="self"/>
   
   <link href="https://hankz1108.github.io/"/>
-  <updated>2024-02-29T19:42:28.466Z</updated>
+  <updated>2024-03-05T14:47:38.205Z</updated>
   <id>https://hankz1108.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://hankz1108.github.io/posts/20240119-documents-laravel-system-settings/"/>
     <id>https://hankz1108.github.io/posts/20240119-documents-laravel-system-settings/</id>
     <published>2024-01-18T17:01:09.000Z</published>
-    <updated>2024-02-29T19:42:28.466Z</updated>
+    <updated>2024-03-05T14:47:38.205Z</updated>
     
     
       
@@ -71,7 +71,7 @@
     <link href="https://hankz1108.github.io/posts/20231220-hexo-plugin-recommend/"/>
     <id>https://hankz1108.github.io/posts/20231220-hexo-plugin-recommend/</id>
     <published>2023-12-19T16:07:57.000Z</published>
-    <updated>2024-01-16T16:16:19.524Z</updated>
+    <updated>2024-03-05T14:47:33.631Z</updated>
     
     
       
@@ -93,7 +93,7 @@
     <link href="https://hankz1108.github.io/posts/20231206-php-install-cs-fixer-on-ubuntu/"/>
     <id>https://hankz1108.github.io/posts/20231206-php-install-cs-fixer-on-ubuntu/</id>
     <published>2023-12-06T14:27:39.000Z</published>
-    <updated>2023-12-07T15:30:24.712Z</updated>
+    <updated>2024-03-05T15:09:52.209Z</updated>
     
     
       
@@ -117,13 +117,12 @@
     <link href="https://hankz1108.github.io/posts/20231206-composer-install-on-ubuntu/"/>
     <id>https://hankz1108.github.io/posts/20231206-composer-install-on-ubuntu/</id>
     <published>2023-12-06T14:08:44.000Z</published>
-    <updated>2024-01-18T17:03:29.748Z</updated>
+    <updated>2024-03-05T14:52:28.345Z</updated>
     
     
       
       
-    <summary type="html">&lt;p&gt;請參考&lt;a href=&quot;https://getcomposer.org/doc/00-intro.md&quot;&gt;Composer官方安裝文件&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;一、安裝&quot;&gt;&lt;a href=&quot;#一、安裝&quot; class=&quot;headerlink&quot; title=&quot;一、安裝&quot;</summary>
+    <summary type="html">&lt;h2 id=&quot;簡介&quot;&gt;&lt;a href=&quot;#簡介&quot; class=&quot;headerlink&quot; title=&quot;簡介&quot;&gt;&lt;/a&gt;簡介&lt;/h2&gt;&lt;p&gt;Composer是PHP的軟體套件管理系統，它提供用於管理PHP軟體和依賴庫關係的標準格式。&lt;br&gt;通常以專案為單位進行管理，會在專案根目錄</summary>
       
     
     
@@ -133,9 +132,9 @@
     
     <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
     
-    <category term="Linux" scheme="https://hankz1108.github.io/tags/Linux/"/>
-    
     <category term="Composer" scheme="https://hankz1108.github.io/tags/Composer/"/>
+    
+    <category term="Linux" scheme="https://hankz1108.github.io/tags/Linux/"/>
     
   </entry>
   
@@ -144,7 +143,7 @@
     <link href="https://hankz1108.github.io/posts/20231127-mysql-offline-install-rhel/"/>
     <id>https://hankz1108.github.io/posts/20231127-mysql-offline-install-rhel/</id>
     <published>2023-11-26T16:20:07.000Z</published>
-    <updated>2023-12-07T15:30:24.711Z</updated>
+    <updated>2024-03-05T14:47:24.458Z</updated>
     
     
       
@@ -245,7 +244,7 @@
     <link href="https://hankz1108.github.io/posts/20231105-laravel-queue-with-supervisor/"/>
     <id>https://hankz1108.github.io/posts/20231105-laravel-queue-with-supervisor/</id>
     <published>2023-11-04T18:27:47.000Z</published>
-    <updated>2023-12-07T15:30:24.709Z</updated>
+    <updated>2024-03-05T14:47:11.717Z</updated>
     
     
       
@@ -303,7 +302,7 @@
     <link href="https://hankz1108.github.io/posts/20231102-php-mssql-windows/"/>
     <id>https://hankz1108.github.io/posts/20231102-php-mssql-windows/</id>
     <published>2023-11-02T07:25:30.000Z</published>
-    <updated>2023-12-07T15:30:24.708Z</updated>
+    <updated>2024-03-05T14:46:58.601Z</updated>
     
     
       
@@ -334,7 +333,7 @@
     <link href="https://hankz1108.github.io/posts/20231102-php-oracle-windows/"/>
     <id>https://hankz1108.github.io/posts/20231102-php-oracle-windows/</id>
     <published>2023-11-02T07:14:30.000Z</published>
-    <updated>2023-12-07T15:30:24.708Z</updated>
+    <updated>2024-03-05T14:47:03.605Z</updated>
     
     
       
@@ -363,7 +362,7 @@
     <link href="https://hankz1108.github.io/posts/20231101-batch-change-env-path/"/>
     <id>https://hankz1108.github.io/posts/20231101-batch-change-env-path/</id>
     <published>2023-10-31T22:55:29.000Z</published>
-    <updated>2023-12-07T15:30:24.705Z</updated>
+    <updated>2024-03-05T14:46:49.241Z</updated>
     
     
       
@@ -443,7 +442,7 @@
     <link href="https://hankz1108.github.io/posts/20231030-mysql-reset-password/"/>
     <id>https://hankz1108.github.io/posts/20231030-mysql-reset-password/</id>
     <published>2023-10-30T09:50:29.000Z</published>
-    <updated>2023-12-07T15:30:24.705Z</updated>
+    <updated>2024-03-05T14:46:43.846Z</updated>
     
     
       
@@ -467,7 +466,7 @@
     <link href="https://hankz1108.github.io/posts/20231030-ci-query-log-and-memary/"/>
     <id>https://hankz1108.github.io/posts/20231030-ci-query-log-and-memary/</id>
     <published>2023-10-30T09:18:57.000Z</published>
-    <updated>2023-12-07T15:30:24.704Z</updated>
+    <updated>2024-03-05T14:46:36.527Z</updated>
     
     
       
@@ -493,7 +492,7 @@
     <link href="https://hankz1108.github.io/posts/20231029-ci-rm-index/"/>
     <id>https://hankz1108.github.io/posts/20231029-ci-rm-index/</id>
     <published>2023-10-29T10:19:29.000Z</published>
-    <updated>2023-12-07T15:30:24.703Z</updated>
+    <updated>2024-03-05T14:46:32.297Z</updated>
     
     
       
