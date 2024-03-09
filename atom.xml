@@ -6,7 +6,7 @@
   <link href="https://hankz1108.github.io/atom.xml" rel="self"/>
   
   <link href="https://hankz1108.github.io/"/>
-  <updated>2024-03-05T14:47:38.205Z</updated>
+  <updated>2024-03-09T18:34:23.312Z</updated>
   <id>https://hankz1108.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[PHP] $this、self與static的差別</title>
+    <link href="https://hankz1108.github.io/posts/20240310-php-self-and-static/"/>
+    <id>https://hankz1108.github.io/posts/20240310-php-self-and-static/</id>
+    <published>2024-03-09T17:17:54.000Z</published>
+    <updated>2024-03-09T18:34:23.312Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;在PHP中可以用&lt;code&gt;$this&lt;/code&gt;、&lt;code&gt;self&lt;/code&gt;、與&lt;code&gt;static&lt;/code&gt;代表自己這個類別&lt;br&gt;有些人可能搞不清楚他們的區別，尤其是&lt;code&gt;self&lt;/code&gt;、與&lt;code&gt;static&lt;/code&gt;&lt;br&gt;</summary>
+      
+    
+    
+    
+    <category term="PHP" scheme="https://hankz1108.github.io/categories/PHP/"/>
+    
+    
+    <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
+    
+  </entry>
   
   <entry>
     <title>[Documents] Laravel System Settingsw套件</title>
@@ -132,9 +154,9 @@
     
     <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
     
-    <category term="Composer" scheme="https://hankz1108.github.io/tags/Composer/"/>
-    
     <category term="Linux" scheme="https://hankz1108.github.io/tags/Linux/"/>
+    
+    <category term="Composer" scheme="https://hankz1108.github.io/tags/Composer/"/>
     
   </entry>
   
@@ -285,9 +307,9 @@
     <category term="AWS" scheme="https://hankz1108.github.io/categories/AWS/"/>
     
     
-    <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
-    
     <category term="Laravel" scheme="https://hankz1108.github.io/tags/Laravel/"/>
+    
+    <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
     
     <category term="AWS" scheme="https://hankz1108.github.io/tags/AWS/"/>
     
@@ -316,9 +338,9 @@
     <category term="PHP" scheme="https://hankz1108.github.io/categories/PHP/"/>
     
     
-    <category term="CodeIgniter" scheme="https://hankz1108.github.io/tags/CodeIgniter/"/>
-    
     <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
+    
+    <category term="CodeIgniter" scheme="https://hankz1108.github.io/tags/CodeIgniter/"/>
     
     <category term="Windows" scheme="https://hankz1108.github.io/tags/Windows/"/>
     
@@ -347,9 +369,9 @@
     <category term="PHP" scheme="https://hankz1108.github.io/categories/PHP/"/>
     
     
-    <category term="CodeIgniter" scheme="https://hankz1108.github.io/tags/CodeIgniter/"/>
-    
     <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
+    
+    <category term="CodeIgniter" scheme="https://hankz1108.github.io/tags/CodeIgniter/"/>
     
     <category term="Windows" scheme="https://hankz1108.github.io/tags/Windows/"/>
     
@@ -479,9 +501,9 @@
     <category term="CodeIgniter" scheme="https://hankz1108.github.io/categories/CodeIgniter/"/>
     
     
-    <category term="CodeIgniter" scheme="https://hankz1108.github.io/tags/CodeIgniter/"/>
-    
     <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
+    
+    <category term="CodeIgniter" scheme="https://hankz1108.github.io/tags/CodeIgniter/"/>
     
     <category term="記憶體" scheme="https://hankz1108.github.io/tags/%E8%A8%98%E6%86%B6%E9%AB%94/"/>
     
@@ -506,36 +528,9 @@
     <category term="CodeIgniter" scheme="https://hankz1108.github.io/categories/CodeIgniter/"/>
     
     
+    <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
+    
     <category term="CodeIgniter" scheme="https://hankz1108.github.io/tags/CodeIgniter/"/>
-    
-    <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[Laravel] 客製化你的Laravel: macro</title>
-    <link href="https://hankz1108.github.io/posts/20220825-laravel-macro/"/>
-    <id>https://hankz1108.github.io/posts/20220825-laravel-macro/</id>
-    <published>2022-08-24T18:55:17.000Z</published>
-    <updated>2024-01-18T17:02:31.150Z</updated>
-    
-    
-      
-      
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;此文章同步刊登於&lt;a href=&quot;https://blog.twjoin.com/%E5%AE%A2%E8%A3%BD%E5%8C%96%E4%BD%A0%E7%9A%84laravel-macro-a50cb917d82&quot;&gt;哲煜科技的Medium</summary>
-      
-    
-    
-    
-    <category term="Laravel" scheme="https://hankz1108.github.io/categories/Laravel/"/>
-    
-    
-    <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
-    
-    <category term="Laravel" scheme="https://hankz1108.github.io/tags/Laravel/"/>
-    
-    <category term="macro" scheme="https://hankz1108.github.io/tags/macro/"/>
     
   </entry>
   
