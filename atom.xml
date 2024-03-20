@@ -39,11 +39,11 @@
   </entry>
   
   <entry>
-    <title>[Documents] Laravel System Settingsw套件</title>
+    <title>[Documents] Laravel System Settings套件</title>
     <link href="https://hankz1108.github.io/posts/20240119-documents-laravel-system-settings/"/>
     <id>https://hankz1108.github.io/posts/20240119-documents-laravel-system-settings/</id>
     <published>2024-01-18T17:01:09.000Z</published>
-    <updated>2024-03-05T14:47:38.205Z</updated>
+    <updated>2024-03-12T15:38:50.628Z</updated>
     
     
       
@@ -139,7 +139,7 @@
     <link href="https://hankz1108.github.io/posts/20231206-composer-install-on-ubuntu/"/>
     <id>https://hankz1108.github.io/posts/20231206-composer-install-on-ubuntu/</id>
     <published>2023-12-06T14:08:44.000Z</published>
-    <updated>2024-03-05T14:52:28.345Z</updated>
+    <updated>2024-03-18T15:12:36.908Z</updated>
     
     
       
@@ -161,11 +161,11 @@
   </entry>
   
   <entry>
-    <title>[MySQL] 在Linux中離線安裝MySQL</title>
+    <title>[MySQL] 使用RPM在Linux中離線安裝MySQL</title>
     <link href="https://hankz1108.github.io/posts/20231127-mysql-offline-install-rhel/"/>
     <id>https://hankz1108.github.io/posts/20231127-mysql-offline-install-rhel/</id>
     <published>2023-11-26T16:20:07.000Z</published>
-    <updated>2024-03-05T14:47:24.458Z</updated>
+    <updated>2024-03-18T14:59:24.540Z</updated>
     
     
       
@@ -189,7 +189,7 @@
     <link href="https://hankz1108.github.io/posts/20231117-security-hash-encoding-and-encryption/"/>
     <id>https://hankz1108.github.io/posts/20231117-security-hash-encoding-and-encryption/</id>
     <published>2023-11-16T17:15:43.000Z</published>
-    <updated>2023-12-19T17:26:08.402Z</updated>
+    <updated>2024-03-13T18:40:49.256Z</updated>
     
     
       
@@ -262,11 +262,11 @@
   </entry>
   
   <entry>
-    <title>[Laravel] Supervisor執行Laravel的Queue Worker</title>
+    <title>[Laravel] 使用Supervisor執行Laravel的Queue Worker</title>
     <link href="https://hankz1108.github.io/posts/20231105-laravel-queue-with-supervisor/"/>
     <id>https://hankz1108.github.io/posts/20231105-laravel-queue-with-supervisor/</id>
     <published>2023-11-04T18:27:47.000Z</published>
-    <updated>2024-03-05T14:47:11.717Z</updated>
+    <updated>2024-03-12T15:06:21.088Z</updated>
     
     
       
@@ -290,26 +290,26 @@
   </entry>
   
   <entry>
-    <title>[AWS] 設定與上傳檔案到AWS S3(配合laravel-medialibrary)</title>
-    <link href="https://hankz1108.github.io/posts/20231104-aws-s3-setting/"/>
-    <id>https://hankz1108.github.io/posts/20231104-aws-s3-setting/</id>
+    <title>[Laravel] 設定並上傳檔案到AWS S3</title>
+    <link href="https://hankz1108.github.io/posts/20231104-laravel-s3-setting/"/>
+    <id>https://hankz1108.github.io/posts/20231104-laravel-s3-setting/</id>
     <published>2023-11-04T15:05:31.000Z</published>
-    <updated>2023-12-07T15:30:24.709Z</updated>
+    <updated>2024-03-20T17:40:33.971Z</updated>
     
     
       
       
-    <summary type="html">&lt;h2 id=&quot;設定AWS-S3-Simple-Storage-Service&quot;&gt;&lt;a href=&quot;#設定AWS-S3-Simple-Storage-Service&quot; class=&quot;headerlink&quot; title=&quot;設定AWS S3(Simple Storage Servic</summary>
+    <summary type="html">&lt;h2 id=&quot;簡介&quot;&gt;&lt;a href=&quot;#簡介&quot; class=&quot;headerlink&quot; title=&quot;簡介&quot;&gt;&lt;/a&gt;簡介&lt;/h2&gt;&lt;p&gt;Simple Storage Service (S3) 是 AWS 最常應用到的服務，只要是需要將檔案上傳到雲端的狀況都可以使用S3，本篇文</summary>
       
     
     
     
-    <category term="AWS" scheme="https://hankz1108.github.io/categories/AWS/"/>
+    <category term="Laravel" scheme="https://hankz1108.github.io/categories/Laravel/"/>
     
-    
-    <category term="Laravel" scheme="https://hankz1108.github.io/tags/Laravel/"/>
     
     <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
+    
+    <category term="Laravel" scheme="https://hankz1108.github.io/tags/Laravel/"/>
     
     <category term="AWS" scheme="https://hankz1108.github.io/tags/AWS/"/>
     
@@ -338,9 +338,9 @@
     <category term="PHP" scheme="https://hankz1108.github.io/categories/PHP/"/>
     
     
-    <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
-    
     <category term="CodeIgniter" scheme="https://hankz1108.github.io/tags/CodeIgniter/"/>
+    
+    <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
     
     <category term="Windows" scheme="https://hankz1108.github.io/tags/Windows/"/>
     
@@ -369,9 +369,9 @@
     <category term="PHP" scheme="https://hankz1108.github.io/categories/PHP/"/>
     
     
-    <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
-    
     <category term="CodeIgniter" scheme="https://hankz1108.github.io/tags/CodeIgniter/"/>
+    
+    <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
     
     <category term="Windows" scheme="https://hankz1108.github.io/tags/Windows/"/>
     
@@ -380,11 +380,11 @@
   </entry>
   
   <entry>
-    <title>[Batch] 使用Windows批次檔(bat)快速修改PATH環境變數</title>
+    <title>[Batch] 使用Windows批次檔(bat)快速修改PHP版本</title>
     <link href="https://hankz1108.github.io/posts/20231101-batch-change-env-path/"/>
     <id>https://hankz1108.github.io/posts/20231101-batch-change-env-path/</id>
     <published>2023-10-31T22:55:29.000Z</published>
-    <updated>2024-03-05T14:46:49.241Z</updated>
+    <updated>2024-03-20T17:47:38.220Z</updated>
     
     
       
@@ -464,13 +464,13 @@
     <link href="https://hankz1108.github.io/posts/20231030-mysql-reset-password/"/>
     <id>https://hankz1108.github.io/posts/20231030-mysql-reset-password/</id>
     <published>2023-10-30T09:50:29.000Z</published>
-    <updated>2024-03-05T14:46:43.846Z</updated>
+    <updated>2024-03-18T14:44:28.612Z</updated>
     
     
       
       
     <summary type="html">&lt;p&gt;此文章記錄在Linux上 MySQL重置密碼及修改密碼方式&lt;/p&gt;
-&lt;h3 id=&quot;重置密碼&quot;&gt;&lt;a href=&quot;#重置密碼&quot; class=&quot;headerlink&quot; title=&quot;重置密碼&quot;&gt;&lt;/a&gt;重置密碼&lt;/h3&gt;&lt;ol&gt;
+&lt;h2 id=&quot;重置密碼&quot;&gt;&lt;a href=&quot;#重置密碼&quot; class=&quot;headerlink&quot; title=&quot;重置密碼&quot;&gt;&lt;/a&gt;重置密碼&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;&lt;p&gt;使用指令找到MySQL讀取的my</summary>
       
     
@@ -501,9 +501,9 @@
     <category term="CodeIgniter" scheme="https://hankz1108.github.io/categories/CodeIgniter/"/>
     
     
-    <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
-    
     <category term="CodeIgniter" scheme="https://hankz1108.github.io/tags/CodeIgniter/"/>
+    
+    <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
     
     <category term="記憶體" scheme="https://hankz1108.github.io/tags/%E8%A8%98%E6%86%B6%E9%AB%94/"/>
     
@@ -528,9 +528,9 @@
     <category term="CodeIgniter" scheme="https://hankz1108.github.io/categories/CodeIgniter/"/>
     
     
-    <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
-    
     <category term="CodeIgniter" scheme="https://hankz1108.github.io/tags/CodeIgniter/"/>
+    
+    <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
     
   </entry>
   
