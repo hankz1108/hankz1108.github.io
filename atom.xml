@@ -6,7 +6,7 @@
   <link href="https://hankz1108.github.io/atom.xml" rel="self"/>
   
   <link href="https://hankz1108.github.io/"/>
-  <updated>2024-03-09T18:34:23.312Z</updated>
+  <updated>2024-04-10T14:58:34.822Z</updated>
   <id>https://hankz1108.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[GCP] 如何產生帳戶金鑰並讓DBeaver連接BigQuery服務</title>
+    <link href="https://hankz1108.github.io/posts/20240410-gcp-bigquery-connect-with-dbeaver/"/>
+    <id>https://hankz1108.github.io/posts/20240410-gcp-bigquery-connect-with-dbeaver/</id>
+    <published>2024-04-10T13:27:00.000Z</published>
+    <updated>2024-04-10T14:58:34.822Z</updated>
+    
+    
+    <summary type="html">我們在使用Google Cloud Platform(GCP)的BigQuery服務的時候，如果總是透過網頁來操作難免不方便，本篇文章將描述如何產生GCP的服務帳戶金鑰，並利用該金鑰在DBeaver或是其他透過支援JDBC的軟體連接到BigQuery服務。</summary>
+    
+    
+    
+    <category term="GCP" scheme="https://hankz1108.github.io/categories/GCP/"/>
+    
+    
+    <category term="GCP" scheme="https://hankz1108.github.io/tags/GCP/"/>
+    
+    <category term="BigQuery" scheme="https://hankz1108.github.io/tags/BigQuery/"/>
+    
+  </entry>
   
   <entry>
     <title>[PHP] $this、self與static的差別</title>
@@ -154,9 +175,9 @@
     
     <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
     
-    <category term="Linux" scheme="https://hankz1108.github.io/tags/Linux/"/>
-    
     <category term="Composer" scheme="https://hankz1108.github.io/tags/Composer/"/>
+    
+    <category term="Linux" scheme="https://hankz1108.github.io/tags/Linux/"/>
     
   </entry>
   
@@ -239,13 +260,13 @@
     <link href="https://hankz1108.github.io/posts/20231107-batch-backup-folder/"/>
     <id>https://hankz1108.github.io/posts/20231107-batch-backup-folder/</id>
     <published>2023-11-06T18:19:14.000Z</published>
-    <updated>2023-12-07T15:30:24.709Z</updated>
+    <updated>2024-03-24T08:44:43.904Z</updated>
     
     
       
       
-    <summary type="html">&lt;p&gt;對於在Windows系統中備份資料的需求&lt;br&gt;如果可以寫好一個批次檔&lt;br&gt;並使用工作排程定期複製檔案到指定目錄那就太方便了&lt;br&gt;以下是使用&lt;code&gt;xcopy&lt;/code&gt;指令實現的一個簡易的bat&lt;/p&gt;
-&lt;h3 id=&quot;一、bat檔案&quot;&gt;&lt;a href=&quot;#一、</summary>
+    <summary type="html">&lt;p&gt;對於在Windows系統中備份資料的需求&lt;br&gt;如果可以寫好一個批次檔，並使用工作排程定期複製檔案到指定目錄那就太方便了&lt;br&gt;以下是使用&lt;code&gt;xcopy&lt;/code&gt;指令實現的一個簡易的bat檔教學&lt;/p&gt;
+&lt;h2 id=&quot;教學&quot;&gt;&lt;a href=&quot;#教學&quot; cla</summary>
       
     
     
@@ -307,9 +328,9 @@
     <category term="Laravel" scheme="https://hankz1108.github.io/categories/Laravel/"/>
     
     
-    <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
-    
     <category term="Laravel" scheme="https://hankz1108.github.io/tags/Laravel/"/>
+    
+    <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
     
     <category term="AWS" scheme="https://hankz1108.github.io/tags/AWS/"/>
     
@@ -338,9 +359,9 @@
     <category term="PHP" scheme="https://hankz1108.github.io/categories/PHP/"/>
     
     
-    <category term="CodeIgniter" scheme="https://hankz1108.github.io/tags/CodeIgniter/"/>
-    
     <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
+    
+    <category term="CodeIgniter" scheme="https://hankz1108.github.io/tags/CodeIgniter/"/>
     
     <category term="Windows" scheme="https://hankz1108.github.io/tags/Windows/"/>
     
@@ -369,9 +390,9 @@
     <category term="PHP" scheme="https://hankz1108.github.io/categories/PHP/"/>
     
     
-    <category term="CodeIgniter" scheme="https://hankz1108.github.io/tags/CodeIgniter/"/>
-    
     <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
+    
+    <category term="CodeIgniter" scheme="https://hankz1108.github.io/tags/CodeIgniter/"/>
     
     <category term="Windows" scheme="https://hankz1108.github.io/tags/Windows/"/>
     
@@ -501,36 +522,11 @@
     <category term="CodeIgniter" scheme="https://hankz1108.github.io/categories/CodeIgniter/"/>
     
     
-    <category term="CodeIgniter" scheme="https://hankz1108.github.io/tags/CodeIgniter/"/>
-    
     <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
+    
+    <category term="CodeIgniter" scheme="https://hankz1108.github.io/tags/CodeIgniter/"/>
     
     <category term="記憶體" scheme="https://hankz1108.github.io/tags/%E8%A8%98%E6%86%B6%E9%AB%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[CodeIgniter] 隱藏網址中的index.php</title>
-    <link href="https://hankz1108.github.io/posts/20231029-ci-rm-index/"/>
-    <id>https://hankz1108.github.io/posts/20231029-ci-rm-index/</id>
-    <published>2023-10-29T10:19:29.000Z</published>
-    <updated>2024-03-05T14:46:32.297Z</updated>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Codeigniter如果不調整設定，網址中會自帶index.php&lt;br&gt;為了符合MVC架構，通常會將它去除，以下是處理步驟：&lt;/p&gt;
-&lt;h3 id=&quot;一、開啟伺服器的mod-rewrite&quot;&gt;&lt;a href=&quot;#一、開啟伺服器的mod-rewrite&quot; class=&quot;h</summary>
-      
-    
-    
-    
-    <category term="CodeIgniter" scheme="https://hankz1108.github.io/categories/CodeIgniter/"/>
-    
-    
-    <category term="CodeIgniter" scheme="https://hankz1108.github.io/tags/CodeIgniter/"/>
-    
-    <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
     
   </entry>
   

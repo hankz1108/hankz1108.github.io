@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>[GCP] 如何產生帳戶金鑰並讓DBeaver連接BigQuery服務</title>
+    <link href="/posts/20240410-gcp-bigquery-connect-with-dbeaver/"/>
+    <url>/posts/20240410-gcp-bigquery-connect-with-dbeaver/</url>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我們在使用Google Cloud Platform(GCP)的BigQuery服務的時候，如果總是透過網頁來操作難免不方便，本篇文章將描述如何產生GCP的服務帳戶金鑰，並利用該金鑰在DBeaver或是其他透過支援JDBC的軟體連接到BigQuery服務。</p><h2 id="一、產生服務帳戶金鑰"><a href="#一、產生服務帳戶金鑰" class="headerlink" title="一、產生服務帳戶金鑰"></a>一、產生服務帳戶金鑰</h2><p>參考<a href="https://m2msupport.net/m2msupport/generate-service-account-key-in-google-cloud-platform-gcp/">這篇文章</a>取得服務帳戶金鑰的json檔案，過程中請注意以下事項：</p><ul><li>按照需要給予有權限存取BigQuery的角色</li><li>將服務帳戶的存取權授予自己的google帳號</li><li>下載的檔案請務必保管好，之後的連線都會需要依靠這個檔案。</li></ul><h2 id="二、設置DBeaver的連線"><a href="#二、設置DBeaver的連線" class="headerlink" title="二、設置DBeaver的連線"></a>二、設置DBeaver的連線</h2><ol><li><p>到GCP的BigQuery服務界面，並在左側的Explorer中找到你想要連接的服務，並點擊查詢，就可以在右方分頁內容中複製出Project ID</p><p> <img src="https://i.imgur.com/GZOinKF.png" alt="20240410224716"></p></li><li><p>回到DBeaver中，將複製過來的Project ID貼到Project的欄位中(下圖紅框處)<br> <img src="https://i.imgur.com/0wDjC7a.png" alt="20240410224953"></p></li><li><p>將OAuth type改為User-based<br> <img src="https://i.imgur.com/a1nwMmv.png" alt="20240410225001"></p></li><li><p>在Key Path的欄位選擇剛剛下載的json檔案<br> <img src="https://i.imgur.com/0DA25zS.png" alt="20240410225009"></p></li><li><p>填寫完畢後，就可以使用左下角的Test Connection按鈕測試連線，連線時會透過瀏覽器確認帳號授權，如果順利就可以成功連接到BigQuery的服務了。(如果沒有安裝Driver，就會跳出下載JDBC Driver的視窗)</p></li></ol><h2 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h2><ul><li>elementary OS 7.1 (based on Ubuntu 22.04)</li><li>DBeaver 24.0.2</li><li>Simba JDBC Driver for Google BigQuery 42_1.5.0.1001</li></ul><h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ul><li><a href="https://dbeaver.com/docs/dbeaver/Database-driver-BigQuery/24.0/">https://dbeaver.com/docs/dbeaver/Database-driver-BigQuery/24.0/</a></li><li><a href="https://m2msupport.net/m2msupport/generate-service-account-key-in-google-cloud-platform-gcp/">https://m2msupport.net/m2msupport/generate-service-account-key-in-google-cloud-platform-gcp/</a></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>GCP</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>GCP</tag>
+      
+      <tag>BigQuery</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>[PHP] $this、self與static的差別</title>
     <link href="/posts/20240310-php-self-and-static/"/>
     <url>/posts/20240310-php-self-and-static/</url>
@@ -155,9 +182,9 @@
       
       <tag>PHP</tag>
       
-      <tag>Linux</tag>
-      
       <tag>Composer</tag>
+      
+      <tag>Linux</tag>
       
     </tags>
     
@@ -253,7 +280,7 @@
     <link href="/posts/20231107-batch-backup-folder/"/>
     <url>/posts/20231107-batch-backup-folder/</url>
     
-    <content type="html"><![CDATA[<p>對於在Windows系統中備份資料的需求<br>如果可以寫好一個批次檔<br>並使用工作排程定期複製檔案到指定目錄那就太方便了<br>以下是使用<code>xcopy</code>指令實現的一個簡易的bat</p><h3 id="一、bat檔案"><a href="#一、bat檔案" class="headerlink" title="一、bat檔案"></a>一、bat檔案</h3><ol><li>backup.bat <div class="code-wrapper"><pre><code class="hljs dos">@<span class="hljs-built_in">ECHO</span> OFF<span class="hljs-comment"></span><span class="hljs-comment">@REM 指定語系為UTF-8</span><span class="hljs-built_in">chcp</span> <span class="hljs-number">65001</span><span class="hljs-keyword">IF</span> &quot;%<span class="hljs-number">1</span>&quot; == &quot;&quot; (<span class="hljs-built_in">SET</span> /P source=&quot;請輸入要備份的資料夾絕對路徑：&quot;) <span class="hljs-keyword">ELSE</span> (<span class="hljs-built_in">SET</span> source=%~<span class="hljs-number">1</span>)<span class="hljs-keyword">IF</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXIST</span> &quot;<span class="hljs-variable">%source%</span>\&quot; (<span class="hljs-built_in">ECHO</span> 路徑不存在<span class="hljs-built_in">PAUSE</span><span class="hljs-keyword">EXIT</span>)<span class="hljs-keyword">IF</span> &quot;%<span class="hljs-number">2</span>&quot; == &quot;&quot; (<span class="hljs-built_in">SET</span> /P target=&quot;請輸入存放備份資料的絕對路徑：&quot;) <span class="hljs-keyword">ELSE</span> (<span class="hljs-built_in">SET</span> target=%~<span class="hljs-number">2</span>)<span class="hljs-keyword">IF</span> <span class="hljs-keyword">EXIST</span> &quot;<span class="hljs-variable">%target%</span>\&quot; (choice /c Yn /m &quot;目標路徑已經存在檔案，是否覆蓋?&quot;<span class="hljs-comment"></span><span class="hljs-comment">@REM 錯誤的條件</span><span class="hljs-keyword">IF</span> <span class="hljs-keyword">ERRORLEVEL</span> <span class="hljs-number">255</span> <span class="hljs-keyword">GOTO</span> CLOSE<span class="hljs-comment">@REM 選擇不覆蓋</span><span class="hljs-keyword">IF</span> <span class="hljs-keyword">ERRORLEVEL</span> <span class="hljs-number">2</span> <span class="hljs-keyword">GOTO</span> CLOSE<span class="hljs-comment">@REM 選擇繼續備份</span><span class="hljs-keyword">IF</span> <span class="hljs-keyword">ERRORLEVEL</span> <span class="hljs-number">1</span> <span class="hljs-keyword">GOTO</span> CONTINUE<span class="hljs-comment"></span><span class="hljs-comment">@REM 取消指令</span><span class="hljs-keyword">IF</span> <span class="hljs-keyword">ERRORLEVEL</span> <span class="hljs-number">0</span> <span class="hljs-keyword">GOTO</span> CLOSE:CLOSE<span class="hljs-built_in">ECHO</span> 取消備份<span class="hljs-built_in">PAUSE</span><span class="hljs-keyword">EXIT</span>:CONTINUE<span class="hljs-built_in">ECHO</span> 將覆蓋目標路徑檔案<span class="hljs-built_in">PAUSE</span>)<span class="hljs-built_in">xcopy</span> &quot;<span class="hljs-variable">%source%</span>&quot; &quot;<span class="hljs-variable">%target%</span>&quot; /s /e /h /i /c /y<span class="hljs-built_in">ECHO</span> 檔案備份完成<span class="hljs-built_in">PAUSE</span></code></pre></div> 請注意這個bat檔案的編碼格式<span style="color:#df5000">要存成UTF-8</span><br> 或是存成其他編碼後修改<code>chcp</code>的設定<br> 才不會發生中文亂碼的問題</li></ol><h3 id="二、使用方式"><a href="#二、使用方式" class="headerlink" title="二、使用方式"></a>二、使用方式</h3><ol><li><p>直接在指令中輸入備份資料夾與目標資料夾</p> <div class="code-wrapper"><pre><code class="hljs lsl">backup.bat <span class="hljs-string">&quot;C:<span class="hljs-subst">\t</span>est\source&quot;</span> <span class="hljs-string">&quot;C:<span class="hljs-subst">\t</span>est<span class="hljs-subst">\t</span>arget&quot;</span></code></pre></div></li><li><p>直接左鍵點擊兩下檔案，使用交互式命令列輸入目標資料夾<br><img src="https://hackmd.io/_uploads/H1jSZ3876.png" alt="image.png"></p></li></ol>]]></content>
+    <content type="html"><![CDATA[<p>對於在Windows系統中備份資料的需求<br>如果可以寫好一個批次檔，並使用工作排程定期複製檔案到指定目錄那就太方便了<br>以下是使用<code>xcopy</code>指令實現的一個簡易的bat檔教學</p><h2 id="教學"><a href="#教學" class="headerlink" title="教學"></a>教學</h2><h3 id="一、bat檔案"><a href="#一、bat檔案" class="headerlink" title="一、bat檔案"></a>一、bat檔案</h3><ol><li>backup.bat <div class="code-wrapper"><pre><code class="hljs dos">@<span class="hljs-built_in">ECHO</span> OFF<span class="hljs-comment"></span><span class="hljs-comment">@REM 指定語系為UTF-8</span><span class="hljs-built_in">chcp</span> <span class="hljs-number">65001</span><span class="hljs-keyword">IF</span> &quot;%<span class="hljs-number">1</span>&quot; == &quot;&quot; (<span class="hljs-built_in">SET</span> /P source=&quot;請輸入要備份的資料夾絕對路徑：&quot;) <span class="hljs-keyword">ELSE</span> (<span class="hljs-built_in">SET</span> source=%~<span class="hljs-number">1</span>)<span class="hljs-keyword">IF</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXIST</span> &quot;<span class="hljs-variable">%source%</span>\&quot; (<span class="hljs-built_in">ECHO</span> 路徑不存在<span class="hljs-built_in">PAUSE</span><span class="hljs-keyword">EXIT</span>)<span class="hljs-keyword">IF</span> &quot;%<span class="hljs-number">2</span>&quot; == &quot;&quot; (<span class="hljs-built_in">SET</span> /P target=&quot;請輸入存放備份資料的絕對路徑：&quot;) <span class="hljs-keyword">ELSE</span> (<span class="hljs-built_in">SET</span> target=%~<span class="hljs-number">2</span>)<span class="hljs-keyword">IF</span> <span class="hljs-keyword">EXIST</span> &quot;<span class="hljs-variable">%target%</span>\&quot; (choice /c Yn /m &quot;目標路徑已經存在檔案，是否覆蓋?&quot;<span class="hljs-comment"></span><span class="hljs-comment">@REM 錯誤的條件</span><span class="hljs-keyword">IF</span> <span class="hljs-keyword">ERRORLEVEL</span> <span class="hljs-number">255</span> <span class="hljs-keyword">GOTO</span> CLOSE<span class="hljs-comment">@REM 選擇不覆蓋</span><span class="hljs-keyword">IF</span> <span class="hljs-keyword">ERRORLEVEL</span> <span class="hljs-number">2</span> <span class="hljs-keyword">GOTO</span> CLOSE<span class="hljs-comment">@REM 選擇繼續備份</span><span class="hljs-keyword">IF</span> <span class="hljs-keyword">ERRORLEVEL</span> <span class="hljs-number">1</span> <span class="hljs-keyword">GOTO</span> CONTINUE<span class="hljs-comment"></span><span class="hljs-comment">@REM 取消指令</span><span class="hljs-keyword">IF</span> <span class="hljs-keyword">ERRORLEVEL</span> <span class="hljs-number">0</span> <span class="hljs-keyword">GOTO</span> CLOSE:CLOSE<span class="hljs-built_in">ECHO</span> 取消備份<span class="hljs-built_in">PAUSE</span><span class="hljs-keyword">EXIT</span>:CONTINUE<span class="hljs-built_in">ECHO</span> 將覆蓋目標路徑檔案<span class="hljs-built_in">PAUSE</span>)<span class="hljs-built_in">xcopy</span> &quot;<span class="hljs-variable">%source%</span>&quot; &quot;<span class="hljs-variable">%target%</span>&quot; /s /e /h /i /c /y<span class="hljs-built_in">ECHO</span> 檔案備份完成<span class="hljs-built_in">PAUSE</span></code></pre></div> 請注意這個bat檔案的編碼格式<span style="color:#df5000">要存成UTF-8</span><br> 或是存成其他編碼後修改<code>chcp</code>的設定<br> 才不會發生中文亂碼的問題</li></ol><h3 id="二、使用方式"><a href="#二、使用方式" class="headerlink" title="二、使用方式"></a>二、使用方式</h3><ol><li><p>直接在指令中輸入備份資料夾與目標資料夾</p> <div class="code-wrapper"><pre><code class="hljs lsl">backup.bat <span class="hljs-string">&quot;C:<span class="hljs-subst">\t</span>est\source&quot;</span> <span class="hljs-string">&quot;C:<span class="hljs-subst">\t</span>est<span class="hljs-subst">\t</span>arget&quot;</span></code></pre></div></li><li><p>直接左鍵點擊兩下檔案，使用交互式命令列輸入目標資料夾<br><img src="https://hackmd.io/_uploads/H1jSZ3876.png" alt="image.png"></p></li></ol><h2 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h2><ul><li>Windows 10</li></ul><h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ul><li><a href="https://learn.microsoft.com/zh-tw/windows-server/administration/windows-commands/xcopy">https://learn.microsoft.com/zh-tw/windows-server/administration/windows-commands/xcopy</a></li></ul>]]></content>
     
     
     <categories>
@@ -325,9 +352,9 @@
     
     <tags>
       
-      <tag>PHP</tag>
-      
       <tag>Laravel</tag>
+      
+      <tag>PHP</tag>
       
       <tag>AWS</tag>
       
@@ -358,9 +385,9 @@
     
     <tags>
       
-      <tag>CodeIgniter</tag>
-      
       <tag>PHP</tag>
+      
+      <tag>CodeIgniter</tag>
       
       <tag>Windows</tag>
       
@@ -391,9 +418,9 @@
     
     <tags>
       
-      <tag>CodeIgniter</tag>
-      
       <tag>PHP</tag>
+      
+      <tag>CodeIgniter</tag>
       
       <tag>Windows</tag>
       
@@ -526,9 +553,9 @@
     
     <tags>
       
-      <tag>CodeIgniter</tag>
-      
       <tag>PHP</tag>
+      
+      <tag>CodeIgniter</tag>
       
       <tag>記憶體</tag>
       
@@ -555,9 +582,9 @@
     
     <tags>
       
-      <tag>CodeIgniter</tag>
-      
       <tag>PHP</tag>
+      
+      <tag>CodeIgniter</tag>
       
     </tags>
     
@@ -582,9 +609,9 @@
     
     <tags>
       
-      <tag>PHP</tag>
-      
       <tag>Laravel</tag>
+      
+      <tag>PHP</tag>
       
       <tag>macro</tag>
       
