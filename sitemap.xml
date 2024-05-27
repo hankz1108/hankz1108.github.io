@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hankz1108.github.io/posts/20240527-git-cz/</loc>
+    
+    <lastmod>2024-05-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://hankz1108.github.io/posts/20240119-documents-laravel-system-settings/</loc>
     
     <lastmod>2024-05-02</lastmod>
@@ -220,7 +229,7 @@
 
   <url>
     <loc>https://hankz1108.github.io/</loc>
-    <lastmod>2024-05-02</lastmod>
+    <lastmod>2024-05-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -229,85 +238,92 @@
 
   
   <url>
-    <loc>https://hankz1108.github.io/categories/%E5%85%B6%E4%BB%96/</loc>
-    <lastmod>2024-05-02</lastmod>
+    <loc>https://hankz1108.github.io/categories/Laravel/</loc>
+    <lastmod>2024-05-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://hankz1108.github.io/categories/Laravel/</loc>
-    <lastmod>2024-05-02</lastmod>
+    <loc>https://hankz1108.github.io/categories/%E5%85%B6%E4%BB%96/</loc>
+    <lastmod>2024-05-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hankz1108.github.io/categories/CodeIgniter/</loc>
-    <lastmod>2024-05-02</lastmod>
+    <lastmod>2024-05-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hankz1108.github.io/categories/MySQL/</loc>
-    <lastmod>2024-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://hankz1108.github.io/categories/Batch/</loc>
-    <lastmod>2024-05-02</lastmod>
+    <lastmod>2024-05-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hankz1108.github.io/categories/PHP/</loc>
-    <lastmod>2024-05-02</lastmod>
+    <lastmod>2024-05-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://hankz1108.github.io/categories/%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8/</loc>
-    <lastmod>2024-05-02</lastmod>
+    <loc>https://hankz1108.github.io/categories/Batch/</loc>
+    <lastmod>2024-05-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hankz1108.github.io/categories/Vue/</loc>
-    <lastmod>2024-05-02</lastmod>
+    <lastmod>2024-05-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://hankz1108.github.io/categories/%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8/</loc>
+    <lastmod>2024-05-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hankz1108.github.io/categories/Composer/</loc>
-    <lastmod>2024-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://hankz1108.github.io/categories/Hexo/</loc>
-    <lastmod>2024-05-02</lastmod>
+    <lastmod>2024-05-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hankz1108.github.io/categories/Documents/</loc>
-    <lastmod>2024-05-02</lastmod>
+    <lastmod>2024-05-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://hankz1108.github.io/categories/Hexo/</loc>
+    <lastmod>2024-05-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hankz1108.github.io/categories/GCP/</loc>
-    <lastmod>2024-05-02</lastmod>
+    <lastmod>2024-05-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://hankz1108.github.io/categories/Git/</loc>
+    <lastmod>2024-05-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
