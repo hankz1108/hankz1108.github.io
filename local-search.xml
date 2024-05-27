@@ -8,7 +8,7 @@
     <link href="/posts/20240527-git-cz/"/>
     <url>/posts/20240527-git-cz/</url>
     
-    <content type="html"><![CDATA[<h2 id="介紹"><a href="#介紹" class="headerlink" title="介紹"></a>介紹</h2><h3 id="簡述"><a href="#簡述" class="headerlink" title="簡述"></a>簡述</h3><p>在軟體開發中，Git是目前最主流的版本控制系統，用來追蹤和管理程式碼的變更。隨著專案規模的擴大，提交（commit）訊息的管理變得更加重要。<br>這時候，一個能幫助開發者規範提交訊息的工具就顯得特別重要。git-cz就是用來產生簡潔明瞭提交訊息的工具。  </p><h3 id="使用git-cz的優點"><a href="#使用git-cz的優點" class="headerlink" title="使用git-cz的優點"></a>使用git-cz的優點</h3><ol><li>規範提交訊息：確保每個提交的訊息符合預定的格式，便於日後的程式碼管理和版本控制。</li><li>提高可讀性：標準化的提交訊息讓程式碼歷史更易讀，方便開發者快速理解每個變更的目的。</li><li>快速生成提交訊息：使用命令列交互工具可以快速的產生訊息，只需要輸入最重要的內容，其餘的部分將由工具生成，節省時間</li></ol><h3 id="呈現效果"><a href="#呈現效果" class="headerlink" title="呈現效果"></a>呈現效果</h3><p><img src="https://i.imgur.com/0GlNvb5.png" alt="git-cz的commit範例"></p><h3 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h3><p>採用git-cz的Commit格式如下：</p><div class="code-wrapper"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">type</span>&gt;</span>(<span class="hljs-tag">&lt;<span class="hljs-name">scope</span>&gt;</span>): <span class="hljs-tag">&lt;<span class="hljs-name">gitmoji</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">description</span>&gt;</span></code></pre></div><p>例如：</p><div class="code-wrapper"><pre><code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">feat</span><span class="hljs-params">(controller)</span></span>: ✨ 新增管理訂單頁面中的批次修改功能</code></pre></div><h4 id=""><a href="#" class="headerlink" title="&lt;Type&gt;"></a><code>&lt;Type&gt;</code></h4><p>類型如下：</p><ul><li>test：增加測試功能</li><li>feat：新增&#x2F;修改功能</li><li>fix：修正 Bug</li><li>chore：增加或修改第三方套件(輔助工具)等</li><li>docs：修改&#x2F;新增文件</li><li>refactor：重構 or 優化，不屬於 bug 也不屬於新增功能等</li><li>style：修改程式碼格式或風格，不影響原有運作，例如 ESLint、PHP-CS-Fixer</li><li>ci：CI 相關更動</li><li>perf：提高效能的程式碼修正</li></ul><h4 id="-1"><a href="#-1" class="headerlink" title="&lt;scope&gt;"></a><code>&lt;scope&gt;</code></h4><p>修改的範圍，可以按照需求分類。<br>以我自己開發Laravel為例：會按照功能組件拆成controller, service, request, command，輸入的內容通常為該檔案所屬的資料夾名稱，且為”單數”，全部小寫。</p><h4 id="-2"><a href="#-2" class="headerlink" title="&lt;gitmoji&gt;"></a><code>&lt;gitmoji&gt;</code></h4><p>也許你會注意到，Commit說明文字前面多了一個emoji，這其實是為了提高commit的可讀性，在一堆文字當中，如果存在簡潔明瞭的圖示，就可以快速分辨fix、feat等等的不同，而這種用途的emoji又稱為gitmoji。<br>你也可以在<a href="https://gitmoji.dev/">這裡</a>找到不同狀況下建議使用的gitmoji。<br><img src="https://i.imgur.com/9Xu2enV.png" alt="git-cz配合gitmoji使用效果加倍!"></p><h4 id="-3"><a href="#-3" class="headerlink" title="&lt;description&gt;"></a><code>&lt;description&gt;</code></h4><p>簡短的提交內容描述，字數限制的目的是強迫標題簡短，詳細的內容會放在commit的內文中。</p><h2 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h2><h3 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h3><p>使用npm指令進行安裝<a href="https://github.com/stanlindsey/git-cz">此工具</a><br>(此工具為<a href="https://github.com/streamich/git-cz">streamich&#x2F;git-cz</a>的forked，不使用原版工具的原因是原版無法提交時手動輸入<code>&lt;scope&gt;</code>文字內容)</p><div class="code-wrapper"><pre><code class="hljs bash">npm install -g @stanlindsey/git-cz</code></pre></div><h3 id="配置設定檔"><a href="#配置設定檔" class="headerlink" title="配置設定檔"></a>配置設定檔</h3><p>此工具預設會找執行指令位置的設定檔(通常是專案根目錄)，如果找不到就往上一個層級的資料夾找，直到根目錄為止。並且檔案名稱固定為<code>changelog.config.js</code> </p><p>所以我們在專案的根目錄或之上的路徑建立一個名為<code>changelog.config.js</code> 的檔案，並在檔案中寫入以下內容後儲存：  </p><script src="//gist.github.com/b0862d481c714e99067b06c2ca401510.js?file=[changelog-config-js]"></script><!-- <script src="https://gist.github.com/hankz1108/b0862d481c714e99067b06c2ca401510.js"></script> --><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>安裝該套件後會新增一個新的指令<code>git cz</code>，用來取代原有的<code>git commit</code> ，指令使用方式如下：</p><ol><li>執行<code>git cz</code>指令後會開啟一個交互式視窗，使用方向鍵選擇需要的commit type，選好後按下Enter<br><img src="https://i.imgur.com/mJUUMFl.png" alt="git-cz工具開啟畫面"></li><li>輸入修改的範圍<code>&lt;scope&gt;</code></li><li>輸入簡短說明此次commit的內容(有字數限制，必填)</li><li>詳細說明commit內容</li><li>重大更改說明</li><li>Issue，不常用到</li></ol><h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ul><li><a href="https://github.com/stanlindsey/git-cz">https://github.com/stanlindsey/git-cz</a></li><li><a href="https://github.com/streamich/git-cz">https://github.com/streamich/git-cz</a></li><li><a href="https://gitmoji.dev/">https://gitmoji.dev/</a></li><li><a href="https://github.com/hankz1108">https://github.com/hankz1108</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="介紹"><a href="#介紹" class="headerlink" title="介紹"></a>介紹</h2><h3 id="簡述"><a href="#簡述" class="headerlink" title="簡述"></a>簡述</h3><p>在軟體開發中，Git是目前最主流的版本控制系統，用來追蹤和管理程式碼的變更。隨著專案規模的擴大，提交（commit）訊息的管理變得更加重要。<br>這時候，一個能幫助開發者規範提交訊息的工具就顯得特別重要。git-cz就是用來產生簡潔明瞭提交訊息的工具。  </p><h3 id="使用git-cz的優點"><a href="#使用git-cz的優點" class="headerlink" title="使用git-cz的優點"></a>使用git-cz的優點</h3><ol><li>規範提交訊息：確保每個提交的訊息符合預定的格式，便於日後的程式碼管理和版本控制。</li><li>提高可讀性：標準化的提交訊息讓程式碼歷史更易讀，方便開發者快速理解每個變更的目的。</li><li>快速生成提交訊息：使用命令列交互工具可以快速的產生訊息，只需要輸入最重要的內容，其餘的部分將由工具生成，節省時間</li></ol><h3 id="呈現效果"><a href="#呈現效果" class="headerlink" title="呈現效果"></a>呈現效果</h3><p><img src="https://i.imgur.com/0GlNvb5.png" alt="git-cz的commit範例"></p><h3 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h3><p>採用git-cz的Commit格式如下：</p><div class="code-wrapper"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">type</span>&gt;</span>(<span class="hljs-tag">&lt;<span class="hljs-name">scope</span>&gt;</span>): <span class="hljs-tag">&lt;<span class="hljs-name">gitmoji</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">description</span>&gt;</span></code></pre></div><p>例如：</p><div class="code-wrapper"><pre><code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">feat</span><span class="hljs-params">(controller)</span></span>: ✨ 新增管理訂單頁面中的批次修改功能</code></pre></div><h4 id=""><a href="#" class="headerlink" title="&lt;Type&gt;"></a><code>&lt;Type&gt;</code></h4><p>類型如下：</p><ul><li>test：增加測試功能</li><li>feat：新增&#x2F;修改功能</li><li>fix：修正 Bug</li><li>chore：增加或修改第三方套件(輔助工具)等</li><li>docs：修改&#x2F;新增文件</li><li>refactor：重構 or 優化，不屬於 bug 也不屬於新增功能等</li><li>style：修改程式碼格式或風格，不影響原有運作，例如 ESLint、PHP-CS-Fixer</li><li>ci：CI 相關更動</li><li>perf：提高效能的程式碼修正</li></ul><h4 id="-1"><a href="#-1" class="headerlink" title="&lt;scope&gt;"></a><code>&lt;scope&gt;</code></h4><p>修改的範圍，可以按照需求分類。<br>以我自己開發Laravel為例：會按照功能組件拆成controller, service, request, command，輸入的內容通常為該檔案所屬的資料夾名稱，且為”單數”，全部小寫。</p><h4 id="-2"><a href="#-2" class="headerlink" title="&lt;gitmoji&gt;"></a><code>&lt;gitmoji&gt;</code></h4><p>也許你會注意到，Commit說明文字前面多了一個emoji，這其實是為了提高commit的可讀性，在一堆文字當中，如果存在簡潔明瞭的圖示，就可以快速分辨fix、feat等等的不同，而這種用途的emoji又稱為gitmoji。<br>你也可以在<a href="https://gitmoji.dev/">這裡</a>找到不同狀況下建議使用的gitmoji。<br><img src="https://i.imgur.com/9Xu2enV.png" alt="git-cz配合gitmoji使用效果加倍!"></p><h4 id="-3"><a href="#-3" class="headerlink" title="&lt;description&gt;"></a><code>&lt;description&gt;</code></h4><p>簡短的提交內容描述，字數限制的目的是強迫標題簡短，詳細的內容會放在commit的內文中。</p><h2 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h2><h3 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h3><p>使用npm指令進行安裝<a href="https://github.com/stanlindsey/git-cz">此工具</a><br>(此工具為<a href="https://github.com/streamich/git-cz">streamich&#x2F;git-cz</a>的forked，不使用原版工具的原因是原版無法提交時手動輸入<code>&lt;scope&gt;</code>文字內容)</p><div class="code-wrapper"><pre><code class="hljs bash">npm install -g @stanlindsey/git-cz</code></pre></div><h3 id="配置設定檔"><a href="#配置設定檔" class="headerlink" title="配置設定檔"></a>配置設定檔</h3><p>此工具預設會找執行指令位置的設定檔(通常是專案根目錄)，如果找不到就往上一個層級的資料夾找，直到根目錄為止。並且檔案名稱固定為<code>changelog.config.js</code> </p><p>所以我們在專案的根目錄或之上的路徑建立一個名為<code>changelog.config.js</code> 的檔案，並在檔案中寫入以下內容後儲存：  </p><div class="code-wrapper"><pre><code class="hljs javascript"><span class="hljs-comment">/**</span><span class="hljs-comment"> * source: https://gist.github.com/hankz1108/b0862d481c714e99067b06c2ca401510</span><span class="hljs-comment"> * package: https://github.com/stanlindsey/git-cz</span><span class="hljs-comment"> * gitmoji: https://github.com/carloscuesta/gitmoji/?tab=readme-ov-file</span><span class="hljs-comment"> * translate by: https://israynotarray.com/git/20221115/721294310/</span><span class="hljs-comment"> */</span><span class="hljs-variable language_">module</span>.<span class="hljs-property">exports</span> = &#123;  <span class="hljs-attr">disableEmoji</span>: <span class="hljs-literal">false</span>, <span class="hljs-comment">// 是否禁用 emoji</span>  <span class="hljs-attr">format</span>: <span class="hljs-string">&#x27;&#123;type&#125;&#123;scope&#125;: &#123;emoji&#125; &#123;subject&#125;&#x27;</span>, <span class="hljs-comment">// Commit 訊息的格式</span>  <span class="hljs-attr">list</span>: [<span class="hljs-string">&#x27;test&#x27;</span>, <span class="hljs-string">&#x27;feat&#x27;</span>, <span class="hljs-string">&#x27;fix&#x27;</span>, <span class="hljs-string">&#x27;chore&#x27;</span>, <span class="hljs-string">&#x27;docs&#x27;</span>, <span class="hljs-string">&#x27;refactor&#x27;</span>, <span class="hljs-string">&#x27;style&#x27;</span>, <span class="hljs-string">&#x27;ci&#x27;</span>, <span class="hljs-string">&#x27;perf&#x27;</span>], <span class="hljs-comment">// Commit 類型的清單</span>  <span class="hljs-attr">maxMessageLength</span>: <span class="hljs-number">64</span>, <span class="hljs-comment">// Commit 訊息的最大長度</span>  <span class="hljs-attr">minMessageLength</span>: <span class="hljs-number">3</span>, <span class="hljs-comment">// Commit 訊息的最小長度</span>  <span class="hljs-attr">questions</span>: [<span class="hljs-string">&#x27;type&#x27;</span>, <span class="hljs-string">&#x27;scope&#x27;</span>, <span class="hljs-string">&#x27;subject&#x27;</span>, <span class="hljs-string">&#x27;body&#x27;</span>, <span class="hljs-string">&#x27;breaking&#x27;</span>, <span class="hljs-string">&#x27;issues&#x27;</span>, <span class="hljs-string">&#x27;lerna&#x27;</span>], <span class="hljs-comment">// 問題的清單</span>  <span class="hljs-attr">enableWritingScopes</span>: <span class="hljs-literal">true</span>, <span class="hljs-comment">// 是否可自訂scope內容</span>  <span class="hljs-comment">// scopes: [], // Commit 範圍的清單</span>  <span class="hljs-attr">types</span>: &#123; <span class="hljs-comment">// Commit 類型的清單</span>    <span class="hljs-attr">chore</span>: &#123;      <span class="hljs-attr">description</span>: <span class="hljs-string">&#x27;增加或修改第三方套件(輔助工具)等 (maintain)&#x27;</span>, <span class="hljs-comment">// Commit 類型的描述</span>      <span class="hljs-attr">emoji</span>: <span class="hljs-string">&#x27;📦&#x27;</span>, <span class="hljs-comment">// Commit 類型的 emoji</span>      <span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;chore&#x27;</span> <span class="hljs-comment">// Commit 類型的值</span>    &#125;,    <span class="hljs-attr">ci</span>: &#123;      <span class="hljs-attr">description</span>: <span class="hljs-string">&#x27;CI 相關更動(Continuous Integration)&#x27;</span>,      <span class="hljs-attr">emoji</span>: <span class="hljs-string">&#x27;💚&#x27;</span>,      <span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;ci&#x27;</span>    &#125;,    <span class="hljs-attr">docs</span>: &#123;      <span class="hljs-attr">description</span>: <span class="hljs-string">&#x27;修改/新增文件 (documentation)&#x27;</span>,      <span class="hljs-attr">emoji</span>: <span class="hljs-string">&#x27;📝&#x27;</span>,      <span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;docs&#x27;</span>    &#125;,    <span class="hljs-attr">feat</span>: &#123;      <span class="hljs-attr">description</span>: <span class="hljs-string">&#x27;新增/修改功能 (Feature)&#x27;</span>,      <span class="hljs-attr">emoji</span>: <span class="hljs-string">&#x27;✨&#x27;</span>,      <span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;feat&#x27;</span>    &#125;,    <span class="hljs-attr">fix</span>: &#123;      <span class="hljs-attr">description</span>: <span class="hljs-string">&#x27;修正 Bug (bug fix)&#x27;</span>,      <span class="hljs-attr">emoji</span>: <span class="hljs-string">&#x27;🐛&#x27;</span>,      <span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;fix&#x27;</span>    &#125;,    <span class="hljs-attr">perf</span>: &#123;      <span class="hljs-attr">description</span>: <span class="hljs-string">&#x27;提高效能的程式碼修正&#x27;</span>,      <span class="hljs-attr">emoji</span>: <span class="hljs-string">&#x27;⚡️&#x27;</span>,      <span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;perf&#x27;</span>    &#125;,    <span class="hljs-attr">refactor</span>: &#123;      <span class="hljs-attr">description</span>: <span class="hljs-string">&#x27;重構 or 優化，不屬於 bug 也不屬於新增功能等&#x27;</span>,      <span class="hljs-attr">emoji</span>: <span class="hljs-string">&#x27;♻️&#x27;</span>,      <span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;refactor&#x27;</span>    &#125;,    <span class="hljs-attr">release</span>: &#123;      <span class="hljs-attr">description</span>: <span class="hljs-string">&#x27;新增正式釋出的 release commit 訊息&#x27;</span>,      <span class="hljs-attr">emoji</span>: <span class="hljs-string">&#x27;🔖&#x27;</span>,      <span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;release&#x27;</span>    &#125;,    <span class="hljs-attr">style</span>: &#123;      <span class="hljs-attr">description</span>: <span class="hljs-string">&#x27;修改程式碼格式或風格，不影響原有運作，例如 ESLint、PHP-CS-Fixer (formatting, missing semi colons, …)&#x27;</span>,      <span class="hljs-attr">emoji</span>: <span class="hljs-string">&#x27;💄&#x27;</span>,      <span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;style&#x27;</span>    &#125;,    <span class="hljs-attr">test</span>: &#123;      <span class="hljs-attr">description</span>: <span class="hljs-string">&#x27;增加測試功能 (when adding missing tests)&#x27;</span>,      <span class="hljs-attr">emoji</span>: <span class="hljs-string">&#x27;✅&#x27;</span>,      <span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;test&#x27;</span>    &#125;,  &#125;,  <span class="hljs-attr">messages</span>: &#123;  <span class="hljs-comment">// Commit 的提示訊息描述</span>    <span class="hljs-attr">type</span>: <span class="hljs-string">&#x27;請選擇您要 Commit 的類型(必選):&#x27;</span>,    <span class="hljs-attr">customScope</span>: <span class="hljs-string">&#x27;選擇此次 Commit 影響的範圍(可選，若無，請按 Enter 略過):&#x27;</span>,    <span class="hljs-attr">subject</span>: <span class="hljs-string">&#x27;簡短描述 Commit 的修正範圍(必填):\n&#x27;</span>,    <span class="hljs-attr">body</span>: <span class="hljs-string">&#x27;更詳細的 Commit 說明(可選，若無，請按 Enter 略過):\n &#x27;</span>,    <span class="hljs-attr">breaking</span>: <span class="hljs-string">&#x27;列出所有重大更改(可選，若無，請按 Enter 略過):\n&#x27;</span>,    <span class="hljs-attr">footer</span>: <span class="hljs-string">&#x27;此次 Commit 會關閉的 Issues, e.g #123(可選，若無，請按 Enter 略過):&#x27;</span>,    <span class="hljs-attr">confirmCommit</span>: <span class="hljs-string">&#x27;請確認本次 Commit 描述。\n&#x27;</span>,  &#125;,&#125;;</code></pre></div><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>安裝該套件後會新增一個新的指令<code>git cz</code>，用來取代原有的<code>git commit</code> ，指令使用方式如下：</p><ol><li>執行<code>git cz</code>指令後會開啟一個交互式視窗，使用方向鍵選擇需要的commit type，選好後按下Enter<br><img src="https://i.imgur.com/mJUUMFl.png" alt="git-cz工具開啟畫面"></li><li>輸入修改的範圍<code>&lt;scope&gt;</code></li><li>輸入簡短說明此次commit的內容(有字數限制，必填)</li><li>詳細說明commit內容</li><li>重大更改說明</li><li>Issue，不常用到</li></ol><h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ul><li><a href="https://github.com/stanlindsey/git-cz">https://github.com/stanlindsey/git-cz</a></li><li><a href="https://github.com/streamich/git-cz">https://github.com/streamich/git-cz</a></li><li><a href="https://gitmoji.dev/">https://gitmoji.dev/</a></li><li><a href="https://github.com/hankz1108">https://github.com/hankz1108</a></li></ul>]]></content>
     
     
     <categories>
@@ -207,9 +207,9 @@
       
       <tag>PHP</tag>
       
-      <tag>Composer</tag>
-      
       <tag>Linux</tag>
+      
+      <tag>Composer</tag>
       
     </tags>
     
@@ -377,9 +377,9 @@
     
     <tags>
       
-      <tag>Laravel</tag>
-      
       <tag>PHP</tag>
+      
+      <tag>Laravel</tag>
       
       <tag>AWS</tag>
       
@@ -410,9 +410,9 @@
     
     <tags>
       
-      <tag>PHP</tag>
-      
       <tag>CodeIgniter</tag>
+      
+      <tag>PHP</tag>
       
       <tag>Windows</tag>
       
@@ -443,9 +443,9 @@
     
     <tags>
       
-      <tag>PHP</tag>
-      
       <tag>CodeIgniter</tag>
+      
+      <tag>PHP</tag>
       
       <tag>Windows</tag>
       
@@ -578,9 +578,9 @@
     
     <tags>
       
-      <tag>PHP</tag>
-      
       <tag>CodeIgniter</tag>
+      
+      <tag>PHP</tag>
       
       <tag>記憶體</tag>
       
@@ -607,9 +607,9 @@
     
     <tags>
       
-      <tag>PHP</tag>
-      
       <tag>CodeIgniter</tag>
+      
+      <tag>PHP</tag>
       
     </tags>
     
@@ -634,9 +634,9 @@
     
     <tags>
       
-      <tag>Laravel</tag>
-      
       <tag>PHP</tag>
+      
+      <tag>Laravel</tag>
       
       <tag>macro</tag>
       
