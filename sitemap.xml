@@ -245,13 +245,6 @@
   </url>
   
   <url>
-    <loc>https://hankz1108.github.io/categories/%E5%85%B6%E4%BB%96/</loc>
-    <lastmod>2024-05-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://hankz1108.github.io/categories/CodeIgniter/</loc>
     <lastmod>2024-05-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -266,7 +259,7 @@
   </url>
   
   <url>
-    <loc>https://hankz1108.github.io/categories/PHP/</loc>
+    <loc>https://hankz1108.github.io/categories/%E5%85%B6%E4%BB%96/</loc>
     <lastmod>2024-05-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -274,6 +267,13 @@
   
   <url>
     <loc>https://hankz1108.github.io/categories/Batch/</loc>
+    <lastmod>2024-05-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://hankz1108.github.io/categories/PHP/</loc>
     <lastmod>2024-05-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -301,13 +301,6 @@
   </url>
   
   <url>
-    <loc>https://hankz1108.github.io/categories/Documents/</loc>
-    <lastmod>2024-05-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://hankz1108.github.io/categories/Hexo/</loc>
     <lastmod>2024-05-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -315,7 +308,7 @@
   </url>
   
   <url>
-    <loc>https://hankz1108.github.io/categories/GCP/</loc>
+    <loc>https://hankz1108.github.io/categories/Documents/</loc>
     <lastmod>2024-05-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -323,6 +316,13 @@
   
   <url>
     <loc>https://hankz1108.github.io/categories/Git/</loc>
+    <lastmod>2024-05-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://hankz1108.github.io/categories/GCP/</loc>
     <lastmod>2024-05-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

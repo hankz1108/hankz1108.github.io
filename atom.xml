@@ -6,7 +6,7 @@
   <link href="https://hankz1108.github.io/atom.xml" rel="self"/>
   
   <link href="https://hankz1108.github.io/"/>
-  <updated>2024-05-27T15:36:31.623Z</updated>
+  <updated>2024-05-27T15:51:38.121Z</updated>
   <id>https://hankz1108.github.io/</id>
   
   <author>
@@ -21,10 +21,10 @@
     <link href="https://hankz1108.github.io/posts/20240527-git-cz/"/>
     <id>https://hankz1108.github.io/posts/20240527-git-cz/</id>
     <published>2024-05-27T14:21:17.000Z</published>
-    <updated>2024-05-27T15:36:31.623Z</updated>
+    <updated>2024-05-27T15:51:38.121Z</updated>
     
     
-    <summary type="html">在軟體開發中，Git是目前最主流的版本控制系統，用來追蹤和管理程式碼的變更。隨著專案規模的擴大，提交（commit）訊息的管理變得更加重要。這時候，一個能幫助開發者規範提交訊息的工具就顯得特別重要。git-cz就是用來產生簡潔明瞭commit的工具。</summary>
+    <summary type="html">在軟體開發中，Git是目前最主流的版本控制系統，用來追蹤和管理程式碼的變更。隨著專案規模的擴大，提交（commit）訊息的管理變得更加重要。這時候，一個能幫助開發者規範提交訊息的工具就顯得特別重要。git-cz就是用來產生簡潔明瞭提交訊息的工具。</summary>
     
     
     
@@ -271,11 +271,11 @@
     <category term="Batch" scheme="https://hankz1108.github.io/categories/Batch/"/>
     
     
-    <category term="Windows" scheme="https://hankz1108.github.io/tags/Windows/"/>
-    
     <category term="Batch" scheme="https://hankz1108.github.io/tags/Batch/"/>
     
     <category term="bat" scheme="https://hankz1108.github.io/tags/bat/"/>
+    
+    <category term="Windows" scheme="https://hankz1108.github.io/tags/Windows/"/>
     
   </entry>
   
@@ -398,11 +398,11 @@
     <category term="Batch" scheme="https://hankz1108.github.io/categories/Batch/"/>
     
     
-    <category term="Windows" scheme="https://hankz1108.github.io/tags/Windows/"/>
-    
     <category term="Batch" scheme="https://hankz1108.github.io/tags/Batch/"/>
     
     <category term="bat" scheme="https://hankz1108.github.io/tags/bat/"/>
+    
+    <category term="Windows" scheme="https://hankz1108.github.io/tags/Windows/"/>
     
     <category term="環境變數" scheme="https://hankz1108.github.io/tags/%E7%92%B0%E5%A2%83%E8%AE%8A%E6%95%B8/"/>
     
