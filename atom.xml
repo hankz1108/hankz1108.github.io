@@ -182,9 +182,9 @@
     
     <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
     
-    <category term="Linux" scheme="https://hankz1108.github.io/tags/Linux/"/>
-    
     <category term="Composer" scheme="https://hankz1108.github.io/tags/Composer/"/>
+    
+    <category term="Linux" scheme="https://hankz1108.github.io/tags/Linux/"/>
     
   </entry>
   
@@ -319,9 +319,9 @@
     <category term="Laravel" scheme="https://hankz1108.github.io/categories/Laravel/"/>
     
     
-    <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
-    
     <category term="Laravel" scheme="https://hankz1108.github.io/tags/Laravel/"/>
+    
+    <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
     
     <category term="AWS" scheme="https://hankz1108.github.io/tags/AWS/"/>
     

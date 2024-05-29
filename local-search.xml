@@ -207,9 +207,9 @@
       
       <tag>PHP</tag>
       
-      <tag>Linux</tag>
-      
       <tag>Composer</tag>
+      
+      <tag>Linux</tag>
       
     </tags>
     
@@ -377,9 +377,9 @@
     
     <tags>
       
-      <tag>PHP</tag>
-      
       <tag>Laravel</tag>
+      
+      <tag>PHP</tag>
       
       <tag>AWS</tag>
       
@@ -634,9 +634,9 @@
     
     <tags>
       
-      <tag>PHP</tag>
-      
       <tag>Laravel</tag>
+      
+      <tag>PHP</tag>
       
       <tag>macro</tag>
       
@@ -681,7 +681,7 @@
     <link href="/"/>
     <url>/</url>
     
-    <content type="html"><![CDATA[<p>主要使用PHP進行網頁後端開發，也會一些簡單的JAVA。</p><p>熟悉的框架為CodeIgniter與Laravel，也會撰寫一些簡單的前端，例如：jQuery、Vue。</p><p>目前會在有空時進行文章寫作，歡迎交流。</p>]]></content>
+    <content type="html"><![CDATA[<style>    .text-center {        text-align: center;    }    .skill-img-area img {        background-color: transparent;        margin: 0px 5px;    }</style><h2 id="關於我" class="text-center"><a href="#關於我" class="headerlink" title="關於我"></a>關於我</h2><div class="text-center">嗨！我是Hankz，一個台灣的後端工程師<p>主要使用PHP語言，常使用Laravel與CodeIgniter進行開發</p><p>平時除了寫程式外，偶而也會寫一些技術文章分享在這裡</p><p>有時也會為了我自己的需要，寫一些<a href="https://packagist.org/users/hankz/">開源套件</a></p></div><h2 id="技能" class="text-center"><a href="#技能" class="headerlink" title="技能"></a>技能</h2><div class="text-center skill-img-area">    <a src="https://www.php.net"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="php" width="40" height="40"/></a>    <a src="https://www.java.com"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/></a>    <a src="https://laravel.com/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" alt="laravel" width="40" height="40"/></a>    <a src="https://codeigniter.com"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/codeigniter/codeigniter-plain.svg" alt="codeigniter" width="40" height="40"/></a>    <a src="https://www.mysql.com/"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/></a>    <a src="https://mariadb.org/"><img src="https://www.vectorlogo.zone/logos/mariadb/mariadb-icon.svg" alt="mariadb" width="40" height="40"/></a>    <a src="https://redis.io"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original-wordmark.svg" alt="redis" width="40" height="40"/></a>    <a src="https://www.mongodb.com/"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/></a>    <a src="https://vuejs.org/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" alt="vuejs" width="40" height="40"/></a>    <a src="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/></a>    <a src="https://www.w3.org/html/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="html5" width="40" height="40"/></a>    <a src="https://www.w3schools.com/css/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="css3" width="40" height="40"/></a>    <a src="https://cloud.google.com"><img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg" alt="gcp" width="40" height="40"/></a>    <a src="https://www.docker.com/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="docker" width="40" height="40"/></a>    <a src="https://www.linux.org/"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/></a>    <a src="https://git-scm.com/"><img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/></a>    <a src="https://www.nginx.com"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nginx/nginx-original.svg" alt="nginx" width="40" height="40"/></a></div>]]></content>
     
   </entry>
   
