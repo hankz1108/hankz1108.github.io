@@ -6,7 +6,7 @@
   <link href="https://hankz1108.github.io/atom.xml" rel="self"/>
   
   <link href="https://hankz1108.github.io/"/>
-  <updated>2024-05-27T16:12:22.479Z</updated>
+  <updated>2024-05-30T15:28:05.942Z</updated>
   <id>https://hankz1108.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://hankz1108.github.io/posts/20240527-git-cz/"/>
     <id>https://hankz1108.github.io/posts/20240527-git-cz/</id>
     <published>2024-05-27T14:21:17.000Z</published>
-    <updated>2024-05-27T16:12:22.479Z</updated>
+    <updated>2024-05-30T15:28:05.942Z</updated>
     
     
     <summary type="html">在軟體開發中，Git是目前最主流的版本控制系統，用來追蹤和管理程式碼的變更。隨著專案規模的擴大，提交（commit）訊息的管理變得更加重要。這時候，一個能幫助開發者規範提交訊息的工具就顯得特別重要。git-cz就是用來產生簡潔明瞭提交訊息的工具。</summary>
@@ -214,7 +214,7 @@
     <link href="https://hankz1108.github.io/posts/20231117-security-hash-encoding-and-encryption/"/>
     <id>https://hankz1108.github.io/posts/20231117-security-hash-encoding-and-encryption/</id>
     <published>2023-11-16T17:15:43.000Z</published>
-    <updated>2024-05-02T15:25:47.067Z</updated>
+    <updated>2024-05-30T15:27:47.771Z</updated>
     
     
     <summary type="html">雜湊、編碼和加密雖然在資訊安全中扮演不同的角色，但很多人往往容易搞混它們的用途，本篇文章將帶你了解他們的區別。</summary>
@@ -224,7 +224,7 @@
     <category term="資訊安全" scheme="https://hankz1108.github.io/categories/%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8/"/>
     
     
-    <category term="資訊安全" scheme="https://hankz1108.github.io/tags/%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8/"/>
+    <category term="Security" scheme="https://hankz1108.github.io/tags/Security/"/>
     
     <category term="Hash" scheme="https://hankz1108.github.io/tags/Hash/"/>
     
@@ -284,7 +284,7 @@
     <link href="https://hankz1108.github.io/posts/20231105-laravel-queue-with-supervisor/"/>
     <id>https://hankz1108.github.io/posts/20231105-laravel-queue-with-supervisor/</id>
     <published>2023-11-04T18:27:47.000Z</published>
-    <updated>2024-05-02T15:31:59.885Z</updated>
+    <updated>2024-05-30T15:29:14.350Z</updated>
     
     
     <summary type="html">在使用laravel中的Queue job的時候，除了程式本身寫好之外，伺服器環境還會需要確保Laravel的queue可以持續進行，如果中斷還可以重新啟動，本篇文章將展示Supervisor這個工具的使用方法。</summary>
@@ -346,11 +346,11 @@
     <category term="PHP" scheme="https://hankz1108.github.io/categories/PHP/"/>
     
     
-    <category term="CodeIgniter" scheme="https://hankz1108.github.io/tags/CodeIgniter/"/>
-    
     <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
     
     <category term="Windows" scheme="https://hankz1108.github.io/tags/Windows/"/>
+    
+    <category term="CodeIgniter" scheme="https://hankz1108.github.io/tags/CodeIgniter/"/>
     
     <category term="MsSQL" scheme="https://hankz1108.github.io/tags/MsSQL/"/>
     
@@ -373,11 +373,11 @@
     <category term="PHP" scheme="https://hankz1108.github.io/categories/PHP/"/>
     
     
-    <category term="CodeIgniter" scheme="https://hankz1108.github.io/tags/CodeIgniter/"/>
-    
     <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
     
     <category term="Windows" scheme="https://hankz1108.github.io/tags/Windows/"/>
+    
+    <category term="CodeIgniter" scheme="https://hankz1108.github.io/tags/CodeIgniter/"/>
     
     <category term="Oracle" scheme="https://hankz1108.github.io/tags/Oracle/"/>
     
@@ -413,7 +413,7 @@
     <link href="https://hankz1108.github.io/posts/20231101-php-openssl/"/>
     <id>https://hankz1108.github.io/posts/20231101-php-openssl/</id>
     <published>2023-10-31T22:50:30.000Z</published>
-    <updated>2024-05-02T15:34:41.822Z</updated>
+    <updated>2024-05-30T15:26:52.377Z</updated>
     
     
     <summary type="html">這篇文章將會提供在伺服器上安裝OpenSSL憑證的步驟，包括下載憑證，設定php.ini以及重新啟動Web Server等。</summary>
@@ -427,7 +427,7 @@
     
     <category term="OpenSSL" scheme="https://hankz1108.github.io/tags/OpenSSL/"/>
     
-    <category term="憑證" scheme="https://hankz1108.github.io/tags/%E6%86%91%E8%AD%89/"/>
+    <category term="certificate" scheme="https://hankz1108.github.io/tags/certificate/"/>
     
   </entry>
   
@@ -453,7 +453,7 @@
     <link href="https://hankz1108.github.io/posts/20231030-mysql-reset-password/"/>
     <id>https://hankz1108.github.io/posts/20231030-mysql-reset-password/</id>
     <published>2023-10-30T09:50:29.000Z</published>
-    <updated>2024-05-02T15:37:14.023Z</updated>
+    <updated>2024-05-30T15:26:08.327Z</updated>
     
     
     <summary type="html">如果MySQL忘記密碼，可以使用修改cnf檔案免去登入驗證，再進入MySQL重新設定密碼的方式，找回密碼，另外本文還附上有一般修改密碼的方式。</summary>
@@ -464,6 +464,8 @@
     
     
     <category term="MySQL" scheme="https://hankz1108.github.io/tags/MySQL/"/>
+    
+    <category term="Password" scheme="https://hankz1108.github.io/tags/Password/"/>
     
   </entry>
   

@@ -261,7 +261,7 @@
     
     <tags>
       
-      <tag>資訊安全</tag>
+      <tag>Security</tag>
       
       <tag>Hash</tag>
       
@@ -334,7 +334,7 @@
     <link href="/posts/20231105-laravel-queue-with-supervisor/"/>
     <url>/posts/20231105-laravel-queue-with-supervisor/</url>
     
-    <content type="html"><![CDATA[<p>在使用laravel中的Queue job的時候，除了程式本身寫好之外<br>伺服器環境還會需要確保Laravel的<code>queue:work</code>指令可以持續進行<br>如果中斷還可以重新啟動<br>這個時候就會需要用到Supervisor這個工具了</p><h2 id="一、安裝Supervisor"><a href="#一、安裝Supervisor" class="headerlink" title="一、安裝Supervisor"></a>一、安裝Supervisor</h2><div class="code-wrapper"><pre><code class="hljs bash">apt updateapt install supervisor</code></pre></div><h2 id="二、啟動Supervisor"><a href="#二、啟動Supervisor" class="headerlink" title="二、啟動Supervisor"></a>二、啟動Supervisor</h2><div class="code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment"># supervisord -c &lt;設定檔路徑&gt; (預設/etc/supervisor/supervisord.conf)</span>supervisord -c /etc/supervisor/supervisord.conf</code></pre></div><h2 id="三、建立queue-worker設定檔"><a href="#三、建立queue-worker設定檔" class="headerlink" title="三、建立queue worker設定檔"></a>三、建立queue worker設定檔</h2><div class="code-wrapper"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /etc/supervisor/conf.dvim laravel-worker.conf</code></pre></div><p>設定檔內容(註解要刪除)</p><div class="code-wrapper"><pre><code class="hljs ini"><span class="hljs-section">[program:laravel-worker-my-project]</span><span class="hljs-attr">process_name</span>=%(program_name)s_%(process_num)<span class="hljs-number">02</span>d<span class="hljs-comment"># command=php &lt;專案資料夾路徑&gt;/artisan queue:work --sleep=&lt;每次嘗試間隔&gt; --tries=&lt;最多嘗試次數&gt;</span><span class="hljs-attr">command</span>=php /var/www/my-project/artisan queue:work --sleep=<span class="hljs-number">3</span> --tries=<span class="hljs-number">3</span><span class="hljs-attr">autostart</span>=<span class="hljs-literal">true</span><span class="hljs-attr">autorestart</span>=<span class="hljs-literal">true</span><span class="hljs-attr">user</span>=root<span class="hljs-attr">numprocs</span>=<span class="hljs-number">2</span><span class="hljs-attr">startsecs</span>=<span class="hljs-number">0</span><span class="hljs-attr">redirect_stderr</span>=<span class="hljs-literal">true</span><span class="hljs-comment"># stdout_logfile=&lt;log檔案路徑&gt;</span><span class="hljs-attr">stdout_logfile</span>=/var/log/supervisor/laravel-worker-my-project.log<span class="hljs-comment"># logfile_maxbytes=&lt;LOG檔案上限&gt;</span><span class="hljs-attr">logfile_maxbytes</span>=<span class="hljs-number">104857600</span><span class="hljs-attr">stopwaitsecs</span>=<span class="hljs-number">3600</span></code></pre></div><h2 id="四、載入設定檔並啟用"><a href="#四、載入設定檔並啟用" class="headerlink" title="四、載入設定檔並啟用"></a>四、載入設定檔並啟用</h2><div class="code-wrapper"><pre><code class="hljs bash">supervisorctl rereadsupervisorctl updatesupervisorctl restart laravel-worker-my-project:*</code></pre></div><h2 id="五、查看服務是否啟用"><a href="#五、查看服務是否啟用" class="headerlink" title="五、查看服務是否啟用"></a>五、查看服務是否啟用</h2><div class="code-wrapper"><pre><code class="hljs bash">supervisorctl status</code></pre></div><h2 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h2><ul><li>OS: Ubuntu 18.04</li></ul>]]></content>
+    <content type="html"><![CDATA[<p>在使用laravel中的Queue job的時候，除了程式本身寫好之外<br>伺服器環境還會需要確保Laravel的<code>queue:work</code>指令可以持續進行<br>如果中斷還可以重新啟動<br>這個時候就會需要用到Supervisor這個工具了</p><h2 id="一、安裝Supervisor"><a href="#一、安裝Supervisor" class="headerlink" title="一、安裝Supervisor"></a>一、安裝Supervisor</h2><div class="code-wrapper"><pre><code class="hljs bash">apt updateapt install supervisor</code></pre></div><h2 id="二、啟動Supervisor"><a href="#二、啟動Supervisor" class="headerlink" title="二、啟動Supervisor"></a>二、啟動Supervisor</h2><div class="code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment"># supervisord -c &lt;設定檔路徑&gt; (預設/etc/supervisor/supervisord.conf)</span>sudo supervisord -c /etc/supervisor/supervisord.conf</code></pre></div><h2 id="三、建立queue-worker設定檔"><a href="#三、建立queue-worker設定檔" class="headerlink" title="三、建立queue worker設定檔"></a>三、建立queue worker設定檔</h2><div class="code-wrapper"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /etc/supervisor/conf.dvim laravel-worker.conf</code></pre></div><p>設定檔內容(註解要刪除)</p><div class="code-wrapper"><pre><code class="hljs ini"><span class="hljs-section">[program:laravel-worker-my-project]</span><span class="hljs-attr">process_name</span>=%(program_name)s_%(process_num)<span class="hljs-number">02</span>d<span class="hljs-comment"># command=php &lt;專案資料夾路徑&gt;/artisan queue:work --sleep=&lt;每次嘗試間隔&gt; --tries=&lt;最多嘗試次數&gt;</span><span class="hljs-attr">command</span>=php /var/www/my-project/artisan queue:work --sleep=<span class="hljs-number">3</span> --tries=<span class="hljs-number">3</span><span class="hljs-attr">autostart</span>=<span class="hljs-literal">true</span><span class="hljs-attr">autorestart</span>=<span class="hljs-literal">true</span><span class="hljs-comment"># 執行使用者，建議用與web server相同的使用者，並使用root權限啟動supervisor避免權限問題</span><span class="hljs-attr">user</span>=root<span class="hljs-comment"># 幾個執行續</span><span class="hljs-attr">numprocs</span>=<span class="hljs-number">2</span><span class="hljs-attr">startsecs</span>=<span class="hljs-number">0</span><span class="hljs-attr">redirect_stderr</span>=<span class="hljs-literal">true</span><span class="hljs-comment"># stdout_logfile=&lt;log檔案路徑&gt;</span><span class="hljs-attr">stdout_logfile</span>=/var/log/supervisor/laravel-worker-my-project.log<span class="hljs-comment"># logfile_maxbytes=&lt;LOG檔案byte上限&gt;(範例為10MB)</span><span class="hljs-attr">logfile_maxbytes</span>=<span class="hljs-number">10485760</span><span class="hljs-attr">stopwaitsecs</span>=<span class="hljs-number">3600</span></code></pre></div><h2 id="四、載入設定檔並啟用"><a href="#四、載入設定檔並啟用" class="headerlink" title="四、載入設定檔並啟用"></a>四、載入設定檔並啟用</h2><div class="code-wrapper"><pre><code class="hljs bash">supervisorctl rereadsupervisorctl updatesupervisorctl restart laravel-worker-my-project:*<span class="hljs-comment"># 也可以使用all指定所有設定檔</span>supervisorctl restart all</code></pre></div><h2 id="五、查看服務是否啟用"><a href="#五、查看服務是否啟用" class="headerlink" title="五、查看服務是否啟用"></a>五、查看服務是否啟用</h2><div class="code-wrapper"><pre><code class="hljs bash">supervisorctl status</code></pre></div><h2 id="六、其他操作"><a href="#六、其他操作" class="headerlink" title="六、其他操作"></a>六、其他操作</h2><div class="code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment"># 停止</span><span class="hljs-comment"># supervisorctl stop &lt;program_name&gt;</span>supervisorctl stop laravel-worker-my-project:*supervisorctl stop all<span class="hljs-comment"># 開始</span><span class="hljs-comment"># supervisorctl start &lt;program_name&gt;</span>supervisorctl start laravel-worker-my-project:*supervisorctl start all</code></pre></div><h2 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h2><ul><li>OS: Ubuntu 18.04</li></ul><h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ul><li><a href="https://laravel.com/docs/11.x/queues#supervisor-configuration">https://laravel.com/docs/11.x/queues#supervisor-configuration</a></li><li><a href="http://supervisord.org/">http://supervisord.org/</a></li></ul>]]></content>
     
     
     <categories>
@@ -410,11 +410,11 @@
     
     <tags>
       
-      <tag>CodeIgniter</tag>
-      
       <tag>PHP</tag>
       
       <tag>Windows</tag>
+      
+      <tag>CodeIgniter</tag>
       
       <tag>MsSQL</tag>
       
@@ -443,11 +443,11 @@
     
     <tags>
       
-      <tag>CodeIgniter</tag>
-      
       <tag>PHP</tag>
       
       <tag>Windows</tag>
+      
+      <tag>CodeIgniter</tag>
       
       <tag>Oracle</tag>
       
@@ -509,7 +509,7 @@
       
       <tag>OpenSSL</tag>
       
-      <tag>憑證</tag>
+      <tag>certificate</tag>
       
     </tags>
     
@@ -555,6 +555,8 @@
       
       <tag>MySQL</tag>
       
+      <tag>Password</tag>
+      
     </tags>
     
   </entry>
@@ -578,11 +580,11 @@
     
     <tags>
       
-      <tag>CodeIgniter</tag>
-      
       <tag>PHP</tag>
       
-      <tag>記憶體</tag>
+      <tag>CodeIgniter</tag>
+      
+      <tag>RAM</tag>
       
     </tags>
     
@@ -607,9 +609,9 @@
     
     <tags>
       
-      <tag>CodeIgniter</tag>
-      
       <tag>PHP</tag>
+      
+      <tag>CodeIgniter</tag>
       
     </tags>
     
