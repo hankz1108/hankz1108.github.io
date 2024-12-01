@@ -4,6 +4,66 @@
   
   
   <entry>
+    <title>[Batch] Backing Up Data with a Batch(.bat) File</title>
+    <link href="/posts/20240707-en-20231107-batch-backup-folder/"/>
+    <url>/posts/20240707-en-20231107-batch-backup-folder/</url>
+    
+    <content type="html"><![CDATA[<h3 id="The-Need-for-Data-Backup-in-Windows"><a href="#The-Need-for-Data-Backup-in-Windows" class="headerlink" title="The Need for Data Backup in Windows"></a>The Need for Data Backup in Windows</h3><p>Creating a batch file to automate the process of copying files to a specified directory on a regular schedule can be incredibly convenient. Here is a simple guide on using the <code>xcopy</code> command to achieve this.</p><h2 id="Guide"><a href="#Guide" class="headerlink" title="Guide"></a>Guide</h2><h3 id="1-Create-Batch-File"><a href="#1-Create-Batch-File" class="headerlink" title="1. Create Batch File"></a>1. Create Batch File</h3><ol><li>backup.bat <div class="code-wrapper"><pre><code class="hljs dos">@<span class="hljs-built_in">ECHO</span> OFF<span class="hljs-comment"></span><span class="hljs-comment">@REM Set language encoding to UTF-8</span><span class="hljs-built_in">chcp</span> <span class="hljs-number">65001</span><span class="hljs-keyword">IF</span> &quot;%<span class="hljs-number">1</span>&quot; == &quot;&quot; (    <span class="hljs-built_in">SET</span> /P source=&quot;Please enter the absolute <span class="hljs-built_in">path</span> of the folder to be backed up: &quot;) <span class="hljs-keyword">ELSE</span> (    <span class="hljs-built_in">SET</span> source=%~<span class="hljs-number">1</span>)<span class="hljs-keyword">IF</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXIST</span> &quot;<span class="hljs-variable">%source%</span>\&quot; (    <span class="hljs-built_in">ECHO</span> <span class="hljs-built_in">Path</span> does <span class="hljs-keyword">not</span> <span class="hljs-keyword">exist</span>    <span class="hljs-built_in">PAUSE</span>    <span class="hljs-keyword">EXIT</span>)<span class="hljs-keyword">IF</span> &quot;%<span class="hljs-number">2</span>&quot; == &quot;&quot; (    <span class="hljs-built_in">SET</span> /P target=&quot;Please enter the absolute <span class="hljs-built_in">path</span> <span class="hljs-keyword">for</span> storing the backup: &quot;) <span class="hljs-keyword">ELSE</span> (    <span class="hljs-built_in">SET</span> target=%~<span class="hljs-number">2</span>)<span class="hljs-keyword">IF</span> <span class="hljs-keyword">EXIST</span> &quot;<span class="hljs-variable">%target%</span>\&quot; (    choice /c Yn /m &quot;The target <span class="hljs-built_in">path</span> already contains files. <span class="hljs-keyword">Do</span> you want to overwrite?&quot;<span class="hljs-comment"></span><span class="hljs-comment">    @REM Incorrect condition</span>    <span class="hljs-keyword">IF</span> <span class="hljs-keyword">ERRORLEVEL</span> <span class="hljs-number">255</span> <span class="hljs-keyword">GOTO</span> CLOSE<span class="hljs-comment">    @REM Choose not to overwrite</span>    <span class="hljs-keyword">IF</span> <span class="hljs-keyword">ERRORLEVEL</span> <span class="hljs-number">2</span> <span class="hljs-keyword">GOTO</span> CLOSE<span class="hljs-comment">    @REM Choose to continue backup</span>    <span class="hljs-keyword">IF</span> <span class="hljs-keyword">ERRORLEVEL</span> <span class="hljs-number">1</span> <span class="hljs-keyword">GOTO</span> CONTINUE<span class="hljs-comment"></span><span class="hljs-comment">    @REM Cancel command</span>    <span class="hljs-keyword">IF</span> <span class="hljs-keyword">ERRORLEVEL</span> <span class="hljs-number">0</span> <span class="hljs-keyword">GOTO</span> CLOSE    :CLOSE        <span class="hljs-built_in">ECHO</span> Backup canceled        <span class="hljs-built_in">PAUSE</span>        <span class="hljs-keyword">EXIT</span>    :CONTINUE        <span class="hljs-built_in">ECHO</span> The target <span class="hljs-built_in">path</span> files will be overwritten        <span class="hljs-built_in">PAUSE</span>)<span class="hljs-built_in">xcopy</span> &quot;<span class="hljs-variable">%source%</span>&quot; &quot;<span class="hljs-variable">%target%</span>&quot; /s /e /h /i /c /y<span class="hljs-built_in">ECHO</span> File backup complete<span class="hljs-built_in">PAUSE</span></code></pre></div> Please note that the encoding format of this batch file <span style="color:#df5000">should be saved as UTF-8</span> or you can save it in another encoding and modify the <code>chcp</code> setting accordingly to avoid any issues with garbled Chinese characters.</li></ol><h3 id="2-Usage"><a href="#2-Usage" class="headerlink" title="2. Usage"></a>2. Usage</h3><ol><li><p>Directly input the source and target directories in the command:</p> <div class="code-wrapper"><pre><code class="hljs lsl">backup.bat <span class="hljs-string">&quot;C:<span class="hljs-subst">\t</span>est\source&quot;</span> <span class="hljs-string">&quot;C:<span class="hljs-subst">\t</span>est<span class="hljs-subst">\t</span>arget&quot;</span></code></pre></div></li><li><p>Double-click the file to use the interactive command line to input the target directory:<br><img src="https://hackmd.io/_uploads/H1jSZ3876.png" alt="image.png"></p></li></ol><h2 id="Environment"><a href="#Environment" class="headerlink" title="Environment"></a>Environment</h2><ul><li>Windows 10</li></ul><h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul><li><a href="https://learn.microsoft.com/zh-tw/windows-server/administration/windows-commands/xcopy">https://learn.microsoft.com/zh-tw/windows-server/administration/windows-commands/xcopy</a></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>Batch</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Batch</tag>
+      
+      <tag>bat</tag>
+      
+      <tag>Windows</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[Laravel] Using Supervisor with Laravel Queue Jobs</title>
+    <link href="/posts/20240707-en-20231105-laravel-queue-with-supervisor/"/>
+    <url>/posts/20240707-en-20231105-laravel-queue-with-supervisor/</url>
+    
+    <content type="html"><![CDATA[<h2 id="Using-Supervisor-with-Laravel-Queue-Jobs"><a href="#Using-Supervisor-with-Laravel-Queue-Jobs" class="headerlink" title="Using Supervisor with Laravel Queue Jobs"></a>Using Supervisor with Laravel Queue Jobs</h2><p>When working with queue jobs in Laravel, it is important to ensure that the <code>queue:work</code> command can continuously run on the server. If the process stops, it should be able to restart automatically. This is where the Supervisor tool comes in handy.</p><h2 id="1-Installing-Supervisor"><a href="#1-Installing-Supervisor" class="headerlink" title="1. Installing Supervisor"></a>1. Installing Supervisor</h2><div class="code-wrapper"><pre><code class="hljs bash">apt updateapt install supervisor</code></pre></div><h2 id="2-Starting-Supervisor"><a href="#2-Starting-Supervisor" class="headerlink" title="2. Starting Supervisor"></a>2. Starting Supervisor</h2><div class="code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment"># supervisord -c &lt;configuration file path&gt; (default is /etc/supervisor/supervisord.conf)</span>sudo supervisord -c /etc/supervisor/supervisord.conf</code></pre></div><h2 id="3-Creating-the-Queue-Worker-Configuration-File"><a href="#3-Creating-the-Queue-Worker-Configuration-File" class="headerlink" title="3. Creating the Queue Worker Configuration File"></a>3. Creating the Queue Worker Configuration File</h2><div class="code-wrapper"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /etc/supervisor/conf.dvim laravel-worker.conf</code></pre></div><p>Configuration file content (remove comments):</p><div class="code-wrapper"><pre><code class="hljs ini"><span class="hljs-section">[program:laravel-worker-my-project]</span><span class="hljs-attr">process_name</span>=%(program_name)s_%(process_num)<span class="hljs-number">02</span>d<span class="hljs-comment"># command=php &lt;project directory path&gt;/artisan queue:work --sleep=&lt;interval&gt; --tries=&lt;maximum attempts&gt;</span><span class="hljs-attr">command</span>=php /var/www/my-project/artisan queue:work --sleep=<span class="hljs-number">3</span> --tries=<span class="hljs-number">3</span><span class="hljs-attr">autostart</span>=<span class="hljs-literal">true</span><span class="hljs-attr">autorestart</span>=<span class="hljs-literal">true</span><span class="hljs-comment"># Execution user, recommended to use the same user as the web server. Start Supervisor with root privileges to avoid permission issues.</span><span class="hljs-attr">user</span>=root<span class="hljs-comment"># Number of processes</span><span class="hljs-attr">numprocs</span>=<span class="hljs-number">2</span><span class="hljs-attr">startsecs</span>=<span class="hljs-number">0</span><span class="hljs-attr">redirect_stderr</span>=<span class="hljs-literal">true</span><span class="hljs-comment"># stdout_logfile=&lt;log file path&gt;</span><span class="hljs-attr">stdout_logfile</span>=/var/log/supervisor/laravel-worker-my-project.log<span class="hljs-comment"># logfile_maxbytes=&lt;log file size limit in bytes&gt; (example is 10MB)</span><span class="hljs-attr">logfile_maxbytes</span>=<span class="hljs-number">10485760</span><span class="hljs-attr">stopwaitsecs</span>=<span class="hljs-number">3600</span></code></pre></div><h2 id="4-Loading-and-Enabling-the-Configuration-File"><a href="#4-Loading-and-Enabling-the-Configuration-File" class="headerlink" title="4. Loading and Enabling the Configuration File"></a>4. Loading and Enabling the Configuration File</h2><div class="code-wrapper"><pre><code class="hljs bash">supervisorctl rereadsupervisorctl updatesupervisorctl restart laravel-worker-my-project:*<span class="hljs-comment"># You can also use &quot;all&quot; to specify all configuration files</span>supervisorctl restart all</code></pre></div><h2 id="5-Checking-If-the-Service-is-Running"><a href="#5-Checking-If-the-Service-is-Running" class="headerlink" title="5. Checking If the Service is Running"></a>5. Checking If the Service is Running</h2><div class="code-wrapper"><pre><code class="hljs bash">supervisorctl status</code></pre></div><h2 id="6-Additional-Operations"><a href="#6-Additional-Operations" class="headerlink" title="6. Additional Operations"></a>6. Additional Operations</h2><div class="code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment"># Stopping</span><span class="hljs-comment"># supervisorctl stop &lt;program_name&gt;</span>supervisorctl stop laravel-worker-my-project:*supervisorctl stop all<span class="hljs-comment"># Starting</span><span class="hljs-comment"># supervisorctl start &lt;program_name&gt;</span>supervisorctl start laravel-worker-my-project:*supervisorctl start all</code></pre></div><h2 id="Environment"><a href="#Environment" class="headerlink" title="Environment"></a>Environment</h2><ul><li>OS: Ubuntu 18.04</li></ul><h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul><li><a href="https://laravel.com/docs/11.x/queues#supervisor-configuration">https://laravel.com/docs/11.x/queues#supervisor-configuration</a></li><li><a href="http://supervisord.org/">http://supervisord.org/</a></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>Laravel</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Laravel</tag>
+      
+      <tag>Queue</tag>
+      
+      <tag>job</tag>
+      
+      <tag>Supervisor</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>[Git] 我要整齊的Commit！用git-cz統一格式！</title>
     <link href="/posts/20240527-git-cz/"/>
     <url>/posts/20240527-git-cz/</url>
@@ -207,9 +267,9 @@
       
       <tag>PHP</tag>
       
-      <tag>Composer</tag>
-      
       <tag>Linux</tag>
+      
+      <tag>Composer</tag>
       
     </tags>
     
@@ -412,9 +472,9 @@
       
       <tag>PHP</tag>
       
-      <tag>Windows</tag>
-      
       <tag>CodeIgniter</tag>
+      
+      <tag>Windows</tag>
       
       <tag>MsSQL</tag>
       
@@ -445,9 +505,9 @@
       
       <tag>PHP</tag>
       
-      <tag>Windows</tag>
-      
       <tag>CodeIgniter</tag>
+      
+      <tag>Windows</tag>
       
       <tag>Oracle</tag>
       

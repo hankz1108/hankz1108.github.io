@@ -6,7 +6,7 @@
   <link href="https://hankz1108.github.io/atom.xml" rel="self"/>
   
   <link href="https://hankz1108.github.io/"/>
-  <updated>2024-05-30T15:28:05.942Z</updated>
+  <updated>2024-07-07T15:32:15.113Z</updated>
   <id>https://hankz1108.github.io/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[Batch] Backing Up Data with a Batch(.bat) File</title>
+    <link href="https://hankz1108.github.io/posts/20240707-en-20231107-batch-backup-folder/"/>
+    <id>https://hankz1108.github.io/posts/20240707-en-20231107-batch-backup-folder/</id>
+    <published>2024-07-07T15:32:00.000Z</published>
+    <updated>2024-07-07T15:32:15.113Z</updated>
+    
+    
+    <summary type="html">This article will demonstrate how to write a simple batch file using the xcopy command in a Windows system. This batch file can perform backups via interactive commands and even support scheduling tasks to regularly copy files to a specified directory.</summary>
+    
+    
+    
+    <category term="Batch" scheme="https://hankz1108.github.io/categories/Batch/"/>
+    
+    
+    <category term="Batch" scheme="https://hankz1108.github.io/tags/Batch/"/>
+    
+    <category term="bat" scheme="https://hankz1108.github.io/tags/bat/"/>
+    
+    <category term="Windows" scheme="https://hankz1108.github.io/tags/Windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[Laravel] Using Supervisor with Laravel Queue Jobs</title>
+    <link href="https://hankz1108.github.io/posts/20240707-en-20231105-laravel-queue-with-supervisor/"/>
+    <id>https://hankz1108.github.io/posts/20240707-en-20231105-laravel-queue-with-supervisor/</id>
+    <published>2024-07-07T15:30:00.000Z</published>
+    <updated>2024-07-07T15:32:21.747Z</updated>
+    
+    
+    <summary type="html">When working with queue jobs in Laravel, it is important to ensure that the server environment can keep the Laravel queue running continuously and restart it if it stops. This article will demonstrate how to use the Supervisor tool to achieve this.</summary>
+    
+    
+    
+    <category term="Laravel" scheme="https://hankz1108.github.io/categories/Laravel/"/>
+    
+    
+    <category term="Laravel" scheme="https://hankz1108.github.io/tags/Laravel/"/>
+    
+    <category term="Queue" scheme="https://hankz1108.github.io/tags/Queue/"/>
+    
+    <category term="job" scheme="https://hankz1108.github.io/tags/job/"/>
+    
+    <category term="Supervisor" scheme="https://hankz1108.github.io/tags/Supervisor/"/>
+    
+  </entry>
   
   <entry>
     <title>[Git] 我要整齊的Commit！用git-cz統一格式！</title>
@@ -182,9 +230,9 @@
     
     <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
     
-    <category term="Composer" scheme="https://hankz1108.github.io/tags/Composer/"/>
-    
     <category term="Linux" scheme="https://hankz1108.github.io/tags/Linux/"/>
+    
+    <category term="Composer" scheme="https://hankz1108.github.io/tags/Composer/"/>
     
   </entry>
   
@@ -348,9 +396,9 @@
     
     <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
     
-    <category term="Windows" scheme="https://hankz1108.github.io/tags/Windows/"/>
-    
     <category term="CodeIgniter" scheme="https://hankz1108.github.io/tags/CodeIgniter/"/>
+    
+    <category term="Windows" scheme="https://hankz1108.github.io/tags/Windows/"/>
     
     <category term="MsSQL" scheme="https://hankz1108.github.io/tags/MsSQL/"/>
     
@@ -375,9 +423,9 @@
     
     <category term="PHP" scheme="https://hankz1108.github.io/tags/PHP/"/>
     
-    <category term="Windows" scheme="https://hankz1108.github.io/tags/Windows/"/>
-    
     <category term="CodeIgniter" scheme="https://hankz1108.github.io/tags/CodeIgniter/"/>
+    
+    <category term="Windows" scheme="https://hankz1108.github.io/tags/Windows/"/>
     
     <category term="Oracle" scheme="https://hankz1108.github.io/tags/Oracle/"/>
     
@@ -428,44 +476,6 @@
     <category term="OpenSSL" scheme="https://hankz1108.github.io/tags/OpenSSL/"/>
     
     <category term="certificate" scheme="https://hankz1108.github.io/tags/certificate/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[其他] 軟體開發常用命名規則</title>
-    <link href="https://hankz1108.github.io/posts/20231101-other-codding-name/"/>
-    <id>https://hankz1108.github.io/posts/20231101-other-codding-name/</id>
-    <published>2023-10-31T22:24:29.000Z</published>
-    <updated>2024-05-02T15:35:08.855Z</updated>
-    
-    
-    <summary type="html">軟體開發時應該要有固定的命名規則，以提高程式的可讀性，本篇文章帶你認識常見的幾個命名方法。</summary>
-    
-    
-    
-    <category term="其他" scheme="https://hankz1108.github.io/categories/%E5%85%B6%E4%BB%96/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>[MySQL] MySQL重置密碼及修改密碼</title>
-    <link href="https://hankz1108.github.io/posts/20231030-mysql-reset-password/"/>
-    <id>https://hankz1108.github.io/posts/20231030-mysql-reset-password/</id>
-    <published>2023-10-30T09:50:29.000Z</published>
-    <updated>2024-05-30T15:26:08.327Z</updated>
-    
-    
-    <summary type="html">如果MySQL忘記密碼，可以使用修改cnf檔案免去登入驗證，再進入MySQL重新設定密碼的方式，找回密碼，另外本文還附上有一般修改密碼的方式。</summary>
-    
-    
-    
-    <category term="MySQL" scheme="https://hankz1108.github.io/categories/MySQL/"/>
-    
-    
-    <category term="MySQL" scheme="https://hankz1108.github.io/tags/MySQL/"/>
-    
-    <category term="Password" scheme="https://hankz1108.github.io/tags/Password/"/>
     
   </entry>
   
